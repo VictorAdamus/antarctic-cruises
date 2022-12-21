@@ -1,0 +1,52 @@
+.advantages {
+    width: 100%;
+    background-color: #b0c4de;
+    background: url("../../img/advantage-bg-desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.advantages__container {
+    margin: 0 auto;
+    max-width: 1366px;
+    width: 100%;
+    padding: 120px 103px 120px;
+}
+
+.advantages__title {
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    line-height: 42px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.advantages__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    grid-gap: 40px;
+}
+
+.advantages__item {
+    background-color: $color-white;
+    padding: 30px 30px 50px;  
+}
+
+.advantages__item__title {
+    font-size: $fz-default-title;
+    line-height: 27px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.advantages__item__description {
+    font-size: $fz-default-description;
+    line-height: 20px;
+    margin: 0;
+}

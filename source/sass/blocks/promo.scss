@@ -1,0 +1,32 @@
+.promo {
+    width: 100%;
+    background-color: #4169e1;
+    background: url("../../img/promo-bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 650px;
+    margin-top: -85px;
+}
+
+.promo__container {
+    margin: 0 auto;
+    max-width: 1366px;
+    width: 100%;
+    padding: 283px 103px 20px 198px;
+}
+
+.promo__title {
+    color: $color-white;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 65px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.promo__description {
+    color: $color-white;
+    font-size: 20px;
+    line-height: 24px;
+}

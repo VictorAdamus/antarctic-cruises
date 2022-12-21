@@ -12,46 +12,47 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <div class="container">
-        <div class="header">
-          <div class="header__logo">
-            <a class="header__logo-link" href="#"></a>
-          </div>
-          <nav class="header__nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link" href="#">Преимущества</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">Направления</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">Ближайшие круизы</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <a class="header__logo-link" href="#">LOGO</a>
         </div>
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Преимущества</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Направления</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Ближайшие круизы</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
       <section class="promo">
-        <h1 class="promo__title">Круизы в Антарктику </h1>
-        <p class="promo__description">Волшебный мир айсбергов и пингвинов</p>
+        <div class="promo__container">
+          <h1 class="promo__title">Круизы в Антарктику </h1>
+          <p class="promo__description">Волшебный мир айсбергов и пингвинов</p>
+        </div>
       </section>
       <section class="about">
-        <div class="about__text">
-          <h2 class="visually-hidden">О круизе.</h2>
-          <h3 class="about__title">Путешествие на край Земли</h3>
-          <p class="about__description">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром
-            Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги,
-            несколько видов пингвинов, китов, морских котиков и многое другое.</p>
-        </div>
-        <div class="about__picture">
-          <img>
+        <div class="about__container">
+          <div class="about__text">
+            <h2 class="visually-hidden">О круизе.</h2>
+            <h3 class="about__title">Путешествие на край Земли</h3>
+            <p class="about__description">Это волшебное путешествие поможет вам познакомиться поближе с удивительным
+              миром
+              Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги,
+              несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+          </div>
+          <div class="about__picture">
+            <img src="img/pinguvins-desktop.png" width="560" height="301">
+          </div>
         </div>
       </section>
       <section class="advantages">
@@ -80,205 +81,182 @@
         <div class="products__container">
           <h2 class="products__title">Ближайшие круизы</h2>
           <ul class="products__list">
-            <li class="products__card">
-              <img src="">
-              <div class="card__wrapper">
-                <h4 class="card__title"></h4>
-                <ul class="card__list">
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                </ul>
-                <a class="card__button" href="#">Забронировать</a>
-              </div>
+            <li class="products__card products__card--1">
+              <h4 class="card__title">Круиз "Астория"</h4>
+              <ul class="card__list">
+                <li class="card__item">
+                  <p class="card__item__title">Маршрут</p>
+                  <p class="card__item__description">Аргентина - Фолклендские острова - Антарктида</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Порт отправления</p>
+                  <p class="card__item__description">Ушуайя</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Продолжительность</p>
+                  <p class="card__item__description">11 дней</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Цена</p>
+                  <p class="card__item__description">от 11500 $</p>
+                </li>
+              </ul>
+              <a class="card__button" href="#">Забронировать</a>
             </li>
-            <li class="products__card">
-              <img src="">
-              <div class="card__wrapper">
-                <h4 class="card__title"></h4>
-                <ul class="card__list">
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                </ul>
-                <a class="card__button" href="#">Забронировать</a>
-              </div>
+            <li class="products__card products__card--2">
+              <h4 class="card__title">Круиз “Элайн”</h4>
+              <ul class="card__list">
+                <li class="card__item">
+                  <p class="card__item__title">Маршрут</p>
+                  <p class="card__item__description">Аргентина - Фолклендские острова - Антарктида - Чили</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Порт отправления</p>
+                  <p class="card__item__description">Буэнос-Айрес</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Продолжительность</p>
+                  <p class="card__item__description">20 дней</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Цена</p>
+                  <p class="card__item__description">от 14500 $</p>
+                </li>
+              </ul>
+              <a class="card__button" href="#">Забронировать</a>
             </li>
-            <li class="products__card">
-              <img src="">
-              <div class="card__wrapper">
-                <h4 class="card__title"></h4>
-                <ul class="card__list">
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                </ul>
-                <a class="card__button" href="#">Забронировать</a>
-              </div>
+            <li class="products__card products__card--3">
+              <h4 class="card__title">Круиз "Атлантис"</h4>
+              <ul class="card__list">
+                <li class="card__item">
+                  <p class="card__item__title">Маршрут</p>
+                  <p class="card__item__description">Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида
+                  </p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Порт отправления</p>
+                  <p class="card__item__description">Ушуайя</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Продолжительность</p>
+                  <p class="card__item__description">15 дней</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Цена</p>
+                  <p class="card__item__description">от 14500 $</p>
+                </li>
+              </ul>
+              <a class="card__button" href="#">Забронировать</a>
             </li>
-            <li class="products__card">
-              <img src="">
-              <div class="card__wrapper">
-                <h4 class="card__title"></h4>
-                <ul class="card__list">
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                </ul>
-                <a class="card__button" href="#">Забронировать</a>
-              </div>
+            <li class="products__card products__card--4">
+              <h4 class="card__title">Круиз "Одиссей"</h4>
+              <ul class="card__list">
+                <li class="card__item">
+                  <p class="card__item__title">Маршрут</p>
+                  <p class="card__item__description">Чили - Антарктида</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Порт отправления</p>
+                  <p class="card__item__description">Пунта-Аренас</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Продолжительность</p>
+                  <p class="card__item__description">13 дней</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Цена</p>
+                  <p class="card__item__description">от 9700 $</p>
+                </li>
+              </ul>
+              <a class="card__button" href="#">Забронировать</a>
             </li>
-            <li class="products__card">
-              <img src="">
-              <div class="card__wrapper">
-                <h4 class="card__title"></h4>
-                <ul class="card__list">
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                </ul>
-                <a class="card__button" href="#">Забронировать</a>
-              </div>
+            <li class="products__card products__card--5">
+              <h4 class="card__title">Круиз "Олимпия"</h4>
+              <ul class="card__list">
+                <li class="card__item">
+                  <p class="card__item__title">Маршрут</p>
+                  <p class="card__item__description">Аргентина - Фолклендские острова - Южная Георгия - Антарктида</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Порт отправления</p>
+                  <p class="card__item__description">Ушуайя</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Продолжительность</p>
+                  <p class="card__item__description">21 день</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Цена</p>
+                  <p class="card__item__description">от 18600 $</p>
+                </li>
+              </ul>
+              <a class="card__button" href="#">Забронировать</a>
             </li>
-            <li class="products__card">
-              <img src="">
-              <div class="card__wrapper">
-                <h4 class="card__title"></h4>
-                <ul class="card__list">
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                </ul>
-                <a class="card__button" href="#">Забронировать</a>
-              </div>
+            <li class="products__card products__card--6">
+              <h4 class="card__title">Круиз "Аврора"</h4>
+              <ul class="card__list">
+                <li class="card__item">
+                  <p class="card__item__title">Маршрут</p>
+                  <p class="card__item__description">Аргентина - Антарктида - Чили</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Порт отправления</p>
+                  <p class="card__item__description">Ушуайя</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Продолжительность</p>
+                  <p class="card__item__description">14 дней</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Цена</p>
+                  <p class="card__item__description">от 11700 $</p>
+                </li>
+              </ul>
+              <a class="card__button" href="#">Забронировать</a>
             </li>
-            <li class="products__card">
-              <img src="">
-              <div class="card__wrapper">
-                <h4 class="card__title"></h4>
-                <ul class="card__list">
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                </ul>
-                <a class="card__button" href="#">Забронировать</a>
-              </div>
+            <li class="products__card products__card--7">
+              <h4 class="card__title">Круиз "Леонор"</h4>
+              <ul class="card__list">
+                <li class="card__item">
+                  <p class="card__item__title">Маршрут</p>
+                  <p class="card__item__description">Чили - Южная Георгия - Антарктида - Аргентина</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Порт отправления</p>
+                  <p class="card__item__description">Пунта-Аренас</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Продолжительность</p>
+                  <p class="card__item__description">17 дней</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Цена</p>
+                  <p class="card__item__description">12500 $</p>
+                </li>
+              </ul>
+              <a class="card__button" href="#">Забронировать</a>
             </li>
-            <li class="products__card">
-              <img src="">
-              <div class="card__wrapper">
-                <h4 class="card__title"></h4>
-                <ul class="card__list">
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                  <li class="card__item">
-                    <p class="card__item__title"></p>
-                    <p class="card__item__description"></p>
-                  </li>
-                </ul>
-                <a class="card__button" href="#">Забронировать</a>
-              </div>
+            <li class="products__card products__card--8">
+              <h4 class="card__title">Круиз "Минион - 1"</h4>
+              <ul class="card__list">
+                <li class="card__item">
+                  <p class="card__item__title">Маршрут</p>
+                  <p class="card__item__description">Аргентина - Антарктида</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Порт отправления</p>
+                  <p class="card__item__description">Ушуайя</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Продолжительность</p>
+                  <p class="card__item__description">11 дней</p>
+                </li>
+                <li class="card__item">
+                  <p class="card__item__title">Цена</p>
+                  <p class="card__item__description">от 12300 $</p>
+                </li>
+              </ul>
+              <a class="card__button" href="#">Забронировать</a>
             </li>
           </ul>
         </div>
@@ -287,7 +265,8 @@
         <div class="booking__container">
           <div class="booking__text">
             <h2 class="booking__title">Раннее бронирование</h2>
-            <p class="booking__description">Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
+            <p class="booking__description">Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте
+              до&nbsp;50%</p>
           </div>
           <div class="booking__form"></div>
         </div>
@@ -341,36 +320,6 @@
       </div>
     </footer>
   </div>
-
-  <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="feedback">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

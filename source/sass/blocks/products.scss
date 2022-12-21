@@ -1,0 +1,150 @@
+.products {
+    width: 100%;
+    background-color: $color-white;
+}
+
+.products__container {
+    margin: 0 auto;
+    max-width: 1366px;
+    width: 100%;
+    padding: 95px 103px 120px;
+}
+
+.products__title {
+    text-align: center;
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.products__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.products__card {
+    background-color: $color-dark-blue;
+    color: $color-white;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+
+    &--1 {
+        background: url("../../img/card-desktop-1.png");
+        background-size: cover;
+        
+        @include hover {
+            background: $color-dark-blue;
+        }
+    }
+    &--2 {
+        background: url("../../img/card-desktop-2.png");
+        background-size: cover;
+
+        @include hover {
+            background: $color-dark-blue;
+        }
+    }
+    &--3 {
+        background: url("../../img/card-desktop-3.png");
+        background-size: cover;
+
+        @include hover {
+            background: $color-dark-blue;
+        }
+    }
+    &--4 {
+        background: url("../../img/card-desktop-4.png");
+        background-size: cover;
+
+        @include hover {
+            background: $color-dark-blue;
+        }
+    }
+    &--5 {
+        background: url("../../img/card-desktop-5.png");
+        background-size: cover;
+
+        @include hover {
+            background: $color-dark-blue;
+        }
+    }
+    &--6 {
+        background: url("../../img/card-desktop-6.png");
+        background-size: cover;
+
+        @include hover {
+            background: $color-dark-blue;
+        }
+    }
+    &--7 {
+        background: url("../../img/card-desktop-7.png");
+        background-size: cover;
+
+        @include hover {
+            background: $color-dark-blue;
+        }
+    }
+    &--8 {
+        background: url("../../img/card-desktop-8.png");
+        background-size: cover;
+        
+        @include hover {
+            background: $color-dark-blue;
+        }
+    }
+}
+
+.card__title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: $fz-default-title;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.card__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.card__item {
+    margin-bottom: 20px;
+}
+
+.card__item__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: $fz-default-description;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+.card__item__description {
+    margin: 0;
+    font-size: $fz-default-description;
+    line-height: 14px;
+    font-weight: 400;
+}
+
+.card__button {
+    width: 100%;
+    background-color: $color-white;
+    margin-top: auto;
+    font-size: $fz-default-description;
+    line-height: 14px;
+    font-weight: 600;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

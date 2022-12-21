@@ -1,0 +1,33 @@
+.about {
+    width: 100%;
+    background-color: $color-white;
+}
+
+.about__container {
+    margin: 0 auto;
+    max-width: 1366px;
+    width: 100%;
+    padding: 120px 103px 145px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__text {
+    max-width: 512px;
+    width: 100%;
+}
+
+.about__title {
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.about__description {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+}
