@@ -4,28 +4,51 @@
     z-index: 1;
 }
 .header__container {
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1366px;
-    width: 100%;
     padding: 35px 103px 0;
+
+    @include vp-1023 {
+       padding: 22px 45px 0; 
+    }
+}
+
+.header__logo-icon {
+    fill: $color-white;
+
+    @include vp-1023 {
+        width: 38px;
+        height: 20px;
+    }
 }
 
 .header__nav-list {
     padding: 0;
     margin: 0;
     list-style-type: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 33px;
+
+    @include vp-1023 {
+        column-gap: 23px;
+    }
 }
 
 .header__nav-item {
-    padding: 13px;
+    padding: 13px 0;
+    display: flex;
+    align-items: center;
 }
 
 .header__nav-link {
     font-size: 16px;
     line-height: 20px;
     color: $color-white;
+
+    @include vp-1023 {
+        font-size: 14px;
+        line-height: 17px;
+    }
 }

@@ -624,6 +624,12 @@ button,
   transition: none !important;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1366px;
+  width: 100%;
+}
+
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -654,7 +660,6 @@ button,
 }
 
 .header__container {
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -664,22 +669,34 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 1366px;
-  width: 100%;
   padding: 35px 103px 0;
+}
+
+.header__logo-icon {
+  fill: #f9fbfd;
 }
 
 .header__nav-list {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+  grid-template-columns: repeat(4, auto);
+  -webkit-column-gap: 33px;
+  -moz-column-gap: 33px;
+  column-gap: 33px;
 }
 
 .header__nav-item {
-  padding: 13px;
+  padding: 13px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .header__nav-link {
@@ -700,10 +717,7 @@ button,
 }
 
 .promo__container {
-  margin: 0 auto;
-  max-width: 1366px;
-  width: 100%;
-  padding: 283px 103px 20px 198px;
+  padding: 283px 103px 20px 103px;
 }
 
 .promo__title {
@@ -712,6 +726,7 @@ button,
   font-weight: 700;
   line-height: 65px;
   margin: 0;
+  margin-left: 95px;
   margin-bottom: 30px;
 }
 
@@ -719,6 +734,7 @@ button,
   color: #f9fbfd;
   font-size: 20px;
   line-height: 24px;
+  margin-left: 95px;
 }
 
 .about {
@@ -727,9 +743,6 @@ button,
 }
 
 .about__container {
-  margin: 0 auto;
-  max-width: 1366px;
-  width: 100%;
   padding: 120px 103px 145px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -771,16 +784,13 @@ button,
 }
 
 .advantages__container {
-  margin: 0 auto;
-  max-width: 1366px;
-  width: 100%;
-  padding: 120px 103px 120px;
+  padding: 120px 103px;
 }
 
 .advantages__title {
   text-align: center;
   margin: 0;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 42px;
   font-weight: 600;
   margin-bottom: 60px;
@@ -792,14 +802,21 @@ button,
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (360px)[3];
-  grid-template-columns: repeat(3, 360px);
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
 }
 
 .advantages__item {
   background-color: #f9fbfd;
   padding: 30px 30px 50px;
+  max-width: 360px;
+  width: 100%;
+}
+
+.advantages__icon {
+  fill: #011c40;
+  margin-bottom: 25px;
 }
 
 .advantages__item__title {
@@ -822,9 +839,6 @@ button,
 }
 
 .products__container {
-  margin: 0 auto;
-  max-width: 1366px;
-  width: 100%;
   padding: 95px 103px 120px;
 }
 
@@ -965,10 +979,16 @@ button,
 }
 
 .booking__container {
-  margin: 0 auto;
-  max-width: 1366px;
-  width: 100%;
   padding: 50px 163px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .booking__title {
@@ -984,6 +1004,224 @@ button,
   line-height: 27px;
   margin: 0;
   max-width: 350px;
+}
+
+.form__container {
+  background-color: #011c40;
+  color: #f9fbfd;
+  padding: 50px;
+  max-width: 403px;
+  width: 100%;
+  -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+}
+
+.form__description {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form__field input {
+  padding: 11px 16px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form__field input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input::-moz-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input::placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__checkbox-text {
+  font-size: 10px;
+  line-height: 13px;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.form__button {
+  width: 100%;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 43px;
+  height: 100%;
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+}
+
+.location {
+  width: 100%;
+  background-color: #f9fbfd;
+}
+
+.location__container {
+  padding: 120px 103px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.location__map {
+  max-width: 560px;
+  width: 100%;
+  height: 306px;
+  margin-right: 100px;
+  background-color: #011c40;
+  background: url("../../img/map-desktop.png");
+}
+
+.location__text {
+  max-width: 500px;
+  width: 100%;
+}
+
+.location__description {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 45px;
+}
+
+.location__address {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.location__icon {
+  fill: #011c40;
+  margin-right: 10px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #011c40;
+}
+
+.footer__container {
+  padding: 50px 103px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__logo {
+  margin-right: 40px;
+}
+
+.footer__logo-icon {
+  fill: #f9fbfd;
+}
+
+.footer__nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+  grid-template-columns: repeat(4, auto);
+  -webkit-column-gap: 33px;
+  -moz-column-gap: 33px;
+  column-gap: 33px;
+  row-gap: 20px;
+}
+
+.footer__nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__nav-link {
+  color: #f9fbfd;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.footer__social-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+  grid-template-columns: repeat(3, auto);
+  gap: 27px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-left: auto;
+}
+
+.footer__social-icon {
+  fill: #f9fbfd;
 }
 
 /* @mixin hover-focus {
@@ -1026,6 +1264,312 @@ button,
     }
   }
 */
+
+@media (max-width: 1023px) {
+  .container {
+    max-width: 1023px;
+  }
+
+  .header__container {
+    padding: 22px 45px 0;
+  }
+
+  .header__logo-icon {
+    width: 38px;
+    height: 20px;
+  }
+
+  .header__nav-list {
+    -webkit-column-gap: 23px;
+    -moz-column-gap: 23px;
+    column-gap: 23px;
+  }
+
+  .header__nav-link {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .promo {
+    background: url("../../img/promo-bg-tablet.png");
+    min-height: 638px;
+  }
+
+  .promo__container {
+    padding: 270px 45px 20px;
+  }
+
+  .promo__title {
+    margin-left: 0;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .promo__description {
+    margin-left: 0;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .about__container {
+    padding: 100px 50px 100px 45px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .about__text {
+    max-width: 324px;
+    margin-right: 25px;
+  }
+
+  .about__title {
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+
+  .advantages__container {
+    padding: 100px 45px;
+  }
+
+  .advantages__title {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .advantages__list {
+    grid-gap: 30px;
+  }
+
+  .advantages__item {
+    padding: 25px 20px;
+  }
+
+  .advantages__item:first-child {
+    padding-right: 16px;
+  }
+
+  .advantages__item__title {
+    font-size: 18px;
+  }
+
+  .products__container {
+    padding: 100px 60px;
+  }
+
+  .products__title {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .products__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking {
+    background: url("../../img/form-bg-tablet.png");
+  }
+
+  .booking__container {
+    padding: 100px 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .booking__title {
+    font-size: 34px;
+    line-height: 51px;
+    margin-bottom: 25px;
+  }
+
+  .booking__description {
+    margin: 0 auto 60px;
+  }
+
+  .location__container {
+    padding: 100px 45px;
+  }
+
+  .location__map {
+    max-width: 324px;
+    height: 335px;
+    margin-right: 30px;
+  }
+
+  .footer__container {
+    padding: 50px 45px;
+  }
+
+  .footer__logo-icon {
+    width: 38px;
+    height: auto;
+  }
+
+  .footer__nav-list {
+    -webkit-column-gap: 23px;
+    -moz-column-gap: 23px;
+    column-gap: 23px;
+  }
+
+  .footer__nav-link {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .footer__social-list {
+    gap: 22px;
+  }
+
+  .footer__social-icon {
+    height: 16px;
+    width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 767px;
+  }
+
+  .promo {
+    background: url("../../img/promo-bg-mobile.png");
+    min-height: 500px;
+  }
+
+  .promo__container {
+    padding: 175px 15px 20px;
+  }
+
+  .promo__title {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .about__container {
+    padding: 65px 15px 85px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .about__text {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .about__title {
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  .advantages__container {
+    padding: 65px 15px;
+  }
+
+  .advantages__title {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .products__container {
+    padding: 65px 25px;
+  }
+
+  .products__title {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+
+  .products__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .booking {
+    background: url("../../img/form-bg-mobile.png");
+  }
+
+  .booking__container {
+    padding: 65px 15px;
+  }
+
+  .booking__title {
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .booking__description {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 40px;
+  }
+
+  .form__container {
+    padding: 40px 30px;
+  }
+
+  .form__description {
+    line-height: 25px;
+  }
+
+  .location__container {
+    padding: 65px 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .location__map {
+    margin-right: 0;
+    height: 316px;
+  }
+
+  .footer__container {
+    padding: 40px 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .footer__logo {
+    margin-right: 10px;
+    margin-bottom: 30px;
+  }
+
+  .footer__logo-icon {
+    width: 42px;
+    height: auto;
+  }
+
+  .footer__nav-list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 13px;
+    margin-bottom: 30px;
+  }
+
+  .footer__social-list {
+    margin-left: 0;
+  }
+}
 
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
