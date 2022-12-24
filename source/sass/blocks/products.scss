@@ -55,76 +55,65 @@
 .products__card {
     background-color: $color-dark-blue;
     color: $color-white;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 35px 25px;
+    min-height: 386px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
 
     &--1 {
-        background: url("../../img/card-desktop-1.png");
-        background-size: cover;
-        
-        @include hover {
-            background: $color-dark-blue;
-        }
+        background-image: url("../../img/card-desktop-1.png");
     }
     &--2 {
-        background: url("../../img/card-desktop-2.png");
-        background-size: cover;
-
-        @include hover {
-            background: $color-dark-blue;
-        }
+        background-image: url("../../img/card-desktop-2.png");
     }
     &--3 {
-        background: url("../../img/card-desktop-3.png");
-        background-size: cover;
-
-        @include hover {
-            background: $color-dark-blue;
-        }
+        background-image: url("../../img/card-desktop-3.png");
     }
     &--4 {
-        background: url("../../img/card-desktop-4.png");
-        background-size: cover;
-
-        @include hover {
-            background: $color-dark-blue;
-        }
+        background-image: url("../../img/card-desktop-4.png");
     }
     &--5 {
-        background: url("../../img/card-desktop-5.png");
-        background-size: cover;
-
-        @include hover {
-            background: $color-dark-blue;
-        }
+        background-image: url("../../img/card-desktop-5.png");
     }
     &--6 {
-        background: url("../../img/card-desktop-6.png");
-        background-size: cover;
-
-        @include hover {
-            background: $color-dark-blue;
-        }
+        background-image: url("../../img/card-desktop-6.png");
     }
     &--7 {
-        background: url("../../img/card-desktop-7.png");
-        background-size: cover;
-
-        @include hover {
-            background: $color-dark-blue;
-        }
+        background-image: url("../../img/card-desktop-7.png");
     }
     &--8 {
-        background: url("../../img/card-desktop-8.png");
-        background-size: cover;
-        
-        @include hover {
-            background: $color-dark-blue;
-        }
+        background-image: url("../../img/card-desktop-8.png");
     }
+
+    @include hover {
+        background-image: none;
+        padding: 35px 25px;
+    }
+}
+
+.card__name {
+    margin: 0;
+    font-size: $fz-default-title;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.card__info {
+    display: none;
+    height: 100%;
+}
+
+.products__card:hover .card__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.products__card:hover .card__name {
+    display: none;
 }
 
 .card__title {
