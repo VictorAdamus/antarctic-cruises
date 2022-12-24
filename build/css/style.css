@@ -674,6 +674,7 @@ button,
 
 .header__logo-icon {
   fill: #f9fbfd;
+  cursor: default;
 }
 
 .header__nav-list {
@@ -703,6 +704,10 @@ button,
   font-size: 16px;
   line-height: 20px;
   color: #f9fbfd;
+}
+
+.header__nav-item:hover .header__nav-link {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .promo {
@@ -1041,6 +1046,7 @@ button,
   padding: 11px 16px;
   margin-bottom: 20px;
   width: 100%;
+  background-color: #f9fbfd;
 }
 
 .form__field input::-webkit-input-placeholder {
@@ -1073,10 +1079,68 @@ button,
   color: rgba(1, 28, 64, 0.7);
 }
 
+.form__field input:hover::-webkit-input-placeholder {
+  color: rgba(1, 28, 64, 0.3);
+}
+
+.form__field input:hover::-moz-placeholder {
+  color: rgba(1, 28, 64, 0.3);
+}
+
+.form__field input:hover:-ms-input-placeholder {
+  color: rgba(1, 28, 64, 0.3);
+}
+
+.form__field input:hover::-ms-input-placeholder {
+  color: rgba(1, 28, 64, 0.3);
+}
+
+.form__field input:hover::placeholder {
+  color: rgba(1, 28, 64, 0.3);
+}
+
+.form__checkbox-label {
+  position: relative;
+  cursor: pointer;
+}
+
+.form__checkbox-label:hover .form__checkbox-text {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form__checkbox-label:hover .form__checkbox-checkmark {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form__checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.form__checkbox-label input:checked ~ .form__checkbox-checkmark {
+  background-image: url("../../img/checkbox-mark.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form__checkbox-checkmark {
+  position: absolute;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background-color: #f9fbfd;
+}
+
 .form__checkbox-text {
   font-size: 10px;
   line-height: 13px;
   font-family: "Montserrat", Arial, sans-serif;
+  padding-left: 23px;
 }
 
 .form__button {
@@ -1098,6 +1162,7 @@ button,
   line-height: 21px;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .location {
@@ -1147,6 +1212,19 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: default;
+}
+
+.location__address--phone {
+  cursor: pointer;
+}
+
+.location__address--phone:hover .location__address-link {
+  color: rgba(1, 28, 64, 0.5);
+}
+
+.location__address--phone:hover .location__icon {
+  fill: rgba(1, 28, 64, 0.5);
 }
 
 .location__icon {
@@ -1175,6 +1253,7 @@ button,
 
 .footer__logo-icon {
   fill: #f9fbfd;
+  cursor: default;
 }
 
 .footer__nav-list {
@@ -1208,6 +1287,10 @@ button,
   padding: 5px 0;
 }
 
+.footer__nav-item:hover .footer__nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .footer__social-list {
   display: -ms-grid;
   display: grid;
@@ -1218,6 +1301,14 @@ button,
   padding: 0;
   list-style-type: none;
   margin-left: auto;
+}
+
+.footer__social-item {
+  cursor: pointer;
+}
+
+.footer__social-item:hover .footer__social-icon {
+  fill: rgba(255, 255, 255, 0.5);
 }
 
 .footer__social-icon {

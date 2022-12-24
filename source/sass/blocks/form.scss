@@ -35,6 +35,7 @@
     padding: 11px 16px;
     margin-bottom: 20px;
     width: 100%;
+    background-color: $color-white;
 }
 
 .form__field input::placeholder {
@@ -43,10 +44,52 @@
     color: rgba(1, 28, 64, 0.7);
 }
 
+.form__field input:hover::placeholder {
+    color: rgba(1, 28, 64, 0.3);
+}
+
+.form__checkbox-label {
+    position: relative;
+    cursor: pointer;
+}
+
+.form__checkbox-label:hover .form__checkbox-text {
+    color: $color-transparent-white;
+}
+
+.form__checkbox-label:hover .form__checkbox-checkmark {
+    background-color: $color-transparent-white;
+}
+
+
+.form__checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.form__checkbox-label input:checked ~ .form__checkbox-checkmark {
+    background-image: url("../../img/checkbox-mark.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form__checkbox-checkmark {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background-color: $color-white;
+}
+
 .form__checkbox-text {
     font-size: 10px;
     line-height: 13px;
     font-family: $ff-main;
+    padding-left: 23px;
 }
 
 .form__button {
@@ -62,4 +105,5 @@
     line-height: 21px;
     font-family: $ff-main;
     font-weight: 600;
+    cursor: pointer;
 }

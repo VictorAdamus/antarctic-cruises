@@ -57,6 +57,19 @@
     margin-bottom: 25px;
     display: flex;
     align-items: center;
+    cursor: default;
+
+    &--phone {
+        cursor: pointer;
+    }
+}
+
+.location__address--phone:hover .location__address-link {
+    color: rgba(1, 28, 64, 0.5);
+}
+
+.location__address--phone:hover .location__icon {
+    fill: rgba(1, 28, 64, 0.5);
 }
 
 .location__icon {

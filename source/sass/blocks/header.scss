@@ -16,6 +16,7 @@
 
 .header__logo-icon {
     fill: $color-white;
+    cursor: default;
 
     @include vp-1023 {
         width: 38px;
@@ -51,4 +52,8 @@
         font-size: 14px;
         line-height: 17px;
     }
+}
+
+.header__nav-item:hover .header__nav-link {
+    color: $color-transparent-white;
 }

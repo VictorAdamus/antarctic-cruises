@@ -30,6 +30,7 @@
 
 .footer__logo-icon {
     fill: $color-white;
+    cursor: default;
 
     @include vp-1023 {
         width: 38px;
@@ -80,6 +81,10 @@
     }
 }
 
+.footer__nav-item:hover .footer__nav-link {
+    color: $color-transparent-white;
+}
+
 .footer__social-list {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -96,6 +101,14 @@
     @include vp-767 {
         margin-left: 0;
     }
+}
+
+.footer__social-item {
+    cursor: pointer;
+}
+
+.footer__social-item:hover .footer__social-icon {
+    fill: $color-transparent-white;
 }
 
 .footer__social-icon {
