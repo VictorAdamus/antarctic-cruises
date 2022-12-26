@@ -702,6 +702,7 @@ button,
 
 .header__nav-link {
   font-size: 16px;
+  font-weight: 500;
   line-height: 20px;
   color: #f9fbfd;
 }
@@ -779,11 +780,6 @@ button,
   margin: 0;
   font-size: 16px;
   line-height: 24px;
-}
-
-.about__picture {
-  -ms-flex-item-align: end;
-  align-self: flex-end;
 }
 
 .advantages {
@@ -1045,6 +1041,7 @@ button,
   line-height: 40px;
   font-weight: 700;
   margin: 0;
+  text-align: center;
   margin-bottom: 15px;
 }
 
@@ -1053,6 +1050,7 @@ button,
   line-height: 27px;
   margin: 0;
   max-width: 350px;
+  text-align: center;
 }
 
 .form__container {
@@ -1070,6 +1068,7 @@ button,
   line-height: 27px;
   font-weight: 500;
   margin: 0;
+  text-align: left;
   margin-bottom: 28px;
 }
 
@@ -1151,6 +1150,9 @@ button,
 .form__checkbox-label {
   position: relative;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .form__checkbox-label:hover .form__checkbox-text {
@@ -1186,10 +1188,11 @@ button,
 }
 
 .form__checkbox-text {
+  display: block;
   font-size: 10px;
   line-height: 13px;
   font-family: "Montserrat", Arial, sans-serif;
-  padding-left: 23px;
+  padding-left: 27px;
 }
 
 .form__button {
@@ -1409,7 +1412,7 @@ button,
   }
 
   .header__container {
-    padding: 22px 45px 0;
+    padding: 18px 45px 0;
   }
 
   .header__logo-icon {
@@ -1432,6 +1435,7 @@ button,
     background-image: -webkit-image-set(url("../../img/promo-bg-tablet.png") 1x, url("../../img/promo-bg-tabletx2.png") 2x);
     background-image: image-set(url("../../img/promo-bg-tablet.png") 1x, url("../../img/promo-bg-tabletx2.png") 2x);
     min-height: 638px;
+    margin-top: -61px;
   }
 
   .promo__container {
@@ -1451,7 +1455,7 @@ button,
   }
 
   .about__container {
-    padding: 100px 50px 100px 45px;
+    padding: 100px 50px 94px 45px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -1460,12 +1464,13 @@ button,
   .about__text {
     max-width: 324px;
     margin-right: 25px;
+    margin-top: -10px;
   }
 
   .about__title {
     font-size: 26px;
     line-height: 36px;
-    margin-bottom: 30px;
+    margin-bottom: 17px;
   }
 
   .advantages {
@@ -1474,12 +1479,13 @@ button,
   }
 
   .advantages__container {
-    padding: 100px 45px;
+    padding: 90px 45px 100px;
   }
 
   .advantages__title {
     font-size: 26px;
     line-height: 39px;
+    margin-bottom: 48px;
   }
 
   .advantages__list {
@@ -1487,11 +1493,16 @@ button,
   }
 
   .advantages__item {
-    padding: 25px 20px;
+    padding: 25px 20px 20px;
   }
 
   .advantages__item:first-child {
     padding-right: 16px;
+  }
+
+  .advantages__icon {
+    height: 26px;
+    width: auto;
   }
 
   .advantages__item__title {
@@ -1499,7 +1510,7 @@ button,
   }
 
   .products__container {
-    padding: 100px 60px;
+    padding: 89px 60px 100px;
   }
 
   .products__title {
@@ -1508,6 +1519,7 @@ button,
   }
 
   .products__list {
+    padding: 0;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1552,28 +1564,39 @@ button,
     background-image: image-set(url("../../img/card-tablet-8.png") 1x, url("../../img/card-tablet-8x2.png") 2x);
   }
 
+  .products__card {
+    padding: 34px;
+  }
+
   .booking {
     background-image: -webkit-image-set(url("../../img/form-bg-tablet.png") 1x, url("../../img/form-bg-tabletx2.png") 2x);
     background-image: image-set(url("../../img/form-bg-tablet.png") 1x, url("../../img/form-bg-tabletx2.png") 2x);
   }
 
   .booking__container {
-    padding: 100px 30px;
+    padding: 87px 30px 100px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    text-align: center;
   }
 
   .booking__title {
     font-size: 34px;
     line-height: 51px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
   }
 
   .booking__description {
-    margin: 0 auto 60px;
+    margin: 0 auto 53px;
+  }
+
+  .form__container {
+    padding-bottom: 49px;
+  }
+
+  .form__description {
+    margin-bottom: 29px;
   }
 
   .location__container {
@@ -1586,8 +1609,24 @@ button,
     margin-right: 30px;
   }
 
+  .location__text {
+    margin-top: 65px;
+  }
+
+  .location__description {
+    margin-bottom: 27px;
+  }
+
+  .location__address {
+    margin-bottom: 22px;
+  }
+
   .footer__container {
     padding: 50px 45px;
+  }
+
+  .footer__logo {
+    margin-right: 25px;
   }
 
   .footer__logo-icon {
@@ -1621,14 +1660,23 @@ button,
     max-width: 767px;
   }
 
+  .header__container {
+    padding: 0 15px 0;
+  }
+
+  .header__logo-icon {
+    margin-top: 5px;
+  }
+
   .promo {
     background-image: -webkit-image-set(url("../../img/promo-bg-mobile.png") 1x, url("../../img/promo-bg-mobilex2.png") 2x);
     background-image: image-set(url("../../img/promo-bg-mobile.png") 1x, url("../../img/promo-bg-mobilex2.png") 2x);
     min-height: 500px;
+    margin-top: -60px;
   }
 
   .promo__container {
-    padding: 175px 15px 20px;
+    padding: 176px 15px 20px;
   }
 
   .promo__title {
@@ -1637,7 +1685,7 @@ button,
   }
 
   .about__container {
-    padding: 65px 15px 85px;
+    padding: 66px 15px 85px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1647,12 +1695,17 @@ button,
   .about__text {
     max-width: 100%;
     margin-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .about__title {
     font-size: 24px;
     line-height: 33px;
+  }
+
+  .about__picture {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
   }
 
   .advantages {
@@ -1661,13 +1714,13 @@ button,
   }
 
   .advantages__container {
-    padding: 65px 15px;
+    padding: 55px 15px 64px;
   }
 
   .advantages__title {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .advantages__list {
@@ -1676,17 +1729,18 @@ button,
   }
 
   .advantages__item {
+    min-height: 250px;
     margin: 0 auto;
   }
 
   .products__container {
-    padding: 65px 25px;
+    padding: 58px 25px 65px;
   }
 
   .products__title {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .products__list {
@@ -1734,36 +1788,46 @@ button,
     background-image: image-set(url("../../img/card-mobile-8.png") 1x, url("../../img/card-mobile-8x2.png") 2x);
   }
 
+  .products__card {
+    padding: 25px;
+  }
+
   .booking {
     background-image: -webkit-image-set(url("../../img/form-bg-mobile.png") 1x, url("../../img/form-bg-mobile.png") 2x);
     background-image: image-set(url("../../img/form-bg-mobile.png") 1x, url("../../img/form-bg-mobile.png") 2x);
   }
 
   .booking__container {
-    padding: 65px 15px;
+    padding: 58px 15px 65px;
   }
 
   .booking__title {
     font-size: 24px;
     line-height: 31px;
+    margin-bottom: 15px;
   }
 
   .booking__description {
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 40px;
+    margin-bottom: 33px;
   }
 
   .form__container {
-    padding: 40px 30px;
+    padding: 34px 30px 40px;
   }
 
   .form__description {
     line-height: 25px;
+    text-align: center;
+  }
+
+  .form__checkbox-label {
+    margin-right: auto;
   }
 
   .location__container {
-    padding: 65px 15px;
+    padding: 55px 15px 80px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
@@ -1775,8 +1839,12 @@ button,
     height: 316px;
   }
 
+  .location__text {
+    margin: 0;
+  }
+
   .footer__container {
-    padding: 40px 15px;
+    padding: 40px 15px 35px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1788,7 +1856,7 @@ button,
 
   .footer__logo {
     margin-right: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 17px;
   }
 
   .footer__logo-icon {
@@ -1799,8 +1867,8 @@ button,
   .footer__nav-list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    row-gap: 13px;
-    margin-bottom: 30px;
+    row-gap: 7px;
+    margin-bottom: 23px;
   }
 
   .footer__social-list {

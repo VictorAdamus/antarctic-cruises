@@ -28,11 +28,11 @@
     padding: 110px 103px 120px;
     
     @include vp-1023 {
-        padding: 100px 45px;
+        padding: 90px 45px 100px;
     }
 
     @include vp-767 {
-       padding: 65px 15px; 
+       padding: 55px 15px 64px; 
     }
 }
 
@@ -47,12 +47,13 @@
     @include vp-1023 {
         font-size: 26px;
         line-height: 39px;
+        margin-bottom: 48px;
     }
 
     @include vp-767 {
         font-size: 24px;
         line-height: 36px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 }
 
@@ -81,10 +82,11 @@
     width: 100%;
 
     @include vp-1023 {
-        padding: 25px 20px;
+        padding: 25px 20px 20px;
     }
 
     @include vp-767 {
+        min-height: 250px;
         margin: 0 auto;
     }
 }
@@ -98,6 +100,11 @@
 .advantages__icon {
     fill: $color-dark-blue;
     margin-bottom: 10px;
+
+    @include vp-1023 {
+        height: 26px;
+        width: auto;
+    }
 }
 
 .advantages__item__title {
