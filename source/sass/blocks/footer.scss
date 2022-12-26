@@ -89,6 +89,10 @@
     color: $color-transparent-white;
 }
 
+.footer__social__wrapper {
+    margin-left: auto;
+}
+
 .footer__social-list {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -96,7 +100,6 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    margin-left: auto;
 
     @include vp-1023 {
         gap: 22px;

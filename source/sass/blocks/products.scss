@@ -35,7 +35,7 @@
     }
 }
 
-.products__list {
+.products__card {
     margin: 0;
     padding: 0 18px;
     list-style-type: none;
@@ -53,7 +53,7 @@
     }
 }
 
-.products__card {
+.card {
     background-color: $color-dark-blue;
     color: $color-white;
     background-size: cover;
@@ -256,12 +256,12 @@
     scroll-behavior: smooth;
 }
 
-.products__card:hover .card__info {
+.card:hover .card__info {
     display: flex;
     flex-direction: column;
 }
 
-.products__card:hover .card__name {
+.card:hover .card__name {
     display: none;
 }
 
@@ -309,4 +309,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include hover {
+        background-color: $color-transparent-white;
+    }
 }
