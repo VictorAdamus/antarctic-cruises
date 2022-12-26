@@ -1,17 +1,26 @@
 .booking {
     width: 100%;
     background-color: #b0c4de;
-    background: url("../../img/form-bg-desktop.png");
+    background-image: image-set(
+        url("../../img/form-bg-desktop.png") 1x,
+        url("../../img/form-bg-desktopx2.png") 2x
+    );
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     @include vp-1023 {
-        background: url("../../img/form-bg-tablet.png");
+        background-image: image-set(
+            url("../../img/form-bg-tablet.png") 1x,
+            url("../../img/form-bg-tabletx2.png") 2x
+        );
     }
 
     @include vp-767 {
-        background: url("../../img/form-bg-mobile.png");
+        background-image: image-set(
+            url("../../img/form-bg-mobile.png") 1x,
+            url("../../img/form-bg-mobile.png") 2x
+        );
     }
 }
 
@@ -34,10 +43,10 @@
 
 .booking__title {
     font-size: 40px;
-    line-height: 60px;
+    line-height: 40px;
     font-weight: 700;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 
     @include vp-1023 {
         font-size: 34px;

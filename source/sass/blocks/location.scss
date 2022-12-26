@@ -6,7 +6,6 @@
 .location__container {
     padding: 120px 103px;
     display: flex;
-    align-items: center;
 
     @include vp-1023 {
         padding: 100px 45px;
@@ -41,6 +40,7 @@
 .location__text {
     max-width: 500px;
     width: 100%;
+    margin-top: 75px;
 }
 
 .location__description {
@@ -48,13 +48,13 @@
     line-height: 27px;
     font-weight: 500;
     margin: 0;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
 }
 
 .location__address {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     display: flex;
     align-items: center;
     cursor: default;

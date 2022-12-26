@@ -23,6 +23,7 @@
 .about__text {
     max-width: 512px;
     width: 100%;
+    margin-top: -5px;
 
     @include vp-1023 {
         max-width: 324px;
@@ -30,6 +31,7 @@
     }
 
     @include vp-767 {
+        max-width: 100%;
         margin-right: 0;
         margin-bottom: 50px;
     }
@@ -40,7 +42,7 @@
     line-height: 42px;
     font-weight: 600;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 
     @include vp-1023 {
         font-size: 26px;
@@ -58,4 +60,8 @@
     margin: 0;
     font-size: 16px;
     line-height: 24px;
+}
+
+.about__picture {
+    align-self: flex-end;
 }

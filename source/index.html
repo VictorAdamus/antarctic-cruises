@@ -8,6 +8,10 @@
   <meta name="description" content="Описание проекта">
   <title>Antarctic Cruises</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/montserrat-400.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-500.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-600.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-700.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -24,16 +28,16 @@
         </div>
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Преимущества</a>
+            <a class="header__nav-link" href="#" data-scroll-advantages>Преимущества</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Направления</a>
+            <a class="header__nav-link" href="#" data-scroll-booking>Направления</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Ближайшие круизы</a>
+            <a class="header__nav-link" href="#" data-scroll-products>Ближайшие круизы</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Контакты</a>
+            <a class="header__nav-link" href="#" data-scroll-location>Контакты</a>
           </li>
         </ul>
       </div>
@@ -58,11 +62,21 @@
               несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
           </div>
           <div class="about__picture">
-            <img src="img/pinguvins-desktop.png" width="560" height="301">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)"
+                srcset="img/pinguvins-desktop.webp 1x, img/pinguvins-desktopx2.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/pinguvins-tablet.webp 1x, img/pinguvins-tabletx2.webp 2x">
+              <source type="image/webp" srcset="img/pinguvins-mobile.webp 1x, img/pinguvins-mobilex2.webp 2x">
+              <source media="(min-width: 1024px)" srcset="img/pinguvins-desktop.png 1x, img/pinguvins-desktopx2.png 2x">
+              <source media="(min-width: 768px)" srcset="img/pinguvins-tablet.png 1x, img/pinguvins-tabletx2.png 2x">
+              <source srcset="img/pinguvins-mobile.png 1x, img/pinguvins-mobilex2.png 2x">
+              <img src="img/pinguvins-desktop.png" alt="Фотография пингвинов." width="560" height="301">
+            </picture>
           </div>
         </div>
       </section>
-      <section class="advantages">
+      <section class="advantages" data-advantages>
         <div class="advantages__container container">
           <h2 class="advantages__title">Преимущества</h2>
           <ul class="advantages__list">
@@ -95,7 +109,7 @@
           </ul>
         </div>
       </section>
-      <section class="products">
+      <section class="products" data-products>
         <div class="products__container container">
           <h2 class="products__title">Ближайшие круизы</h2>
           <ul class="products__list">
@@ -303,7 +317,7 @@
           </ul>
         </div>
       </section>
-      <section class="booking">
+      <section class="booking" data-booking>
         <div class="booking__container container">
           <div class="booking__text">
             <h2 class="booking__title">Раннее бронирование</h2>
@@ -316,11 +330,13 @@
               </p>
               <fieldset class="form__field">
                 <label class="visually-hidden" for="name">Введите имя.</label>
-                <input type="text" id="name" name="Имя" placeholder="Имя" required>
+                <input type="text" id="name" name="Имя" placeholder="Имя" minlength="2" maxlength="15" required>
                 <label class="visually-hidden" for="phone">Введите номер телефона.</label>
-                <input type="tel" id="phone" name="Телефон" placeholder="Телефон" required>
+                <input type="tel" id="phone" name="Телефон" placeholder="Телефон" minlength="11"
+                  pattern="(\+7[0-9]{10}|8[0-9]{10})" required>
                 <label class="visually-hidden" for="email">Введите Email.</label>
-                <input type="email" id="email" name="Email" placeholder="Email" required>
+                <input type="email" id="email" name="Email" placeholder="Email" pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$"
+                  required>
               </fieldset>
               <label class="form__checkbox-label">
                 <input type="checkbox" name="assent" required>
@@ -332,7 +348,7 @@
           </div>
         </div>
       </section>
-      <section class="location">
+      <section class="location" data-location>
         <div class="location__container container">
           <h2 class="visually-hidden">Как нас найти.</h2>
           <div class="location__map">
@@ -348,8 +364,7 @@
               <svg class="location__icon" width="18" height="22">
                 <use href="img/sprite/spite.svg#marker"></use>
               </svg>
-              <a class="location__address-link">г. Санкт Петербург, ул.
-                Большая&nbsp;Конюшенная, 19/8</a>
+              <a class="location__address-link">г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная, 19/8</a>
             </div>
             <div class="location__address location__address--phone">
               <span class="visually-hidden">Наш номер телефона.</span>

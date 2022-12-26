@@ -1,7 +1,7 @@
 .form__container {
     background-color: $color-dark-blue;
     color: $color-white;
-    padding: 50px;
+    padding: 42px 50px 50px;
     max-width: 403px;
     width: 100%;
     box-shadow: 0 4px 45px $color-shadow-blue;
@@ -16,7 +16,7 @@
     line-height: 27px;
     font-weight: 500;
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
 
     @include vp-767 {
         line-height: 25px;
@@ -32,10 +32,15 @@
 }
 
 .form__field input {
-    padding: 11px 16px;
+    padding: 11px 16px 9px;
     margin-bottom: 20px;
+    border: none;
     width: 100%;
     background-color: $color-white;
+}
+
+.form__field input:last-of-type {
+    margin-bottom: 15px;
 }
 
 .form__field input::placeholder {
