@@ -657,6 +657,9 @@ button,
   width: 100%;
   background-color: transparent;
   z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .header__container {
@@ -672,9 +675,12 @@ button,
   padding: 30px 103px 0;
 }
 
+.header__logo-link {
+  cursor: default;
+}
+
 .header__logo-icon {
   fill: #f9fbfd;
-  cursor: default;
 }
 
 .header__nav-list {
@@ -711,19 +717,51 @@ button,
   color: rgba(255, 255, 255, 0.5);
 }
 
-.promo {
-  width: 100%;
-  background-color: #4169e1;
-  background-image: -webkit-image-set(url("../../img/promo-bg-desktop.png") 1x, url("../../img/promo-bg-desktopx2.png") 2x);
-  background-image: image-set(url("../../img/promo-bg-desktop.png") 1x, url("../../img/promo-bg-desktopx2.png") 2x);
-  background-repeat: no-repeat;
+.header__nav__toggle {
+  cursor: pointer;
+  width: 34px;
+  height: 22px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  display: none;
   background-size: cover;
-  min-height: 650px;
-  margin-top: -76px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  padding: 5px;
 }
 
-.promo__container {
-  padding: 270px 103px 20px 103px;
+.header__nav--closed .header__nav__toggle-button {
+  background-image: url("../../img/toggle-open.png");
+}
+
+.header__nav--opened .header__nav__toggle-button {
+  background-image: url("../../img/toggle-close.png");
+  z-index: 5;
+}
+
+.promo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  min-height: 650px;
+  background-image: -webkit-image-set(url("../../img/promo-bg-desktop.png") 1x, url("../../img/promo-bg-desktopx2.png") 2x);
+  background-image: image-set(url("../../img/promo-bg-desktop.png") 1x, url("../../img/promo-bg-desktopx2.png") 2x);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-right: calc(50% - 683px + 103px);
+  padding-left: calc(50% - 683px + 198px);
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .promo__title {
@@ -731,9 +769,7 @@ button,
   font-size: 54px;
   font-weight: 700;
   line-height: 65px;
-  margin: 0;
-  margin-left: 95px;
-  margin-bottom: 10px;
+  margin: 270px 0 10px;
 }
 
 .promo__description {
@@ -741,7 +777,6 @@ button,
   font-size: 20px;
   line-height: 24px;
   margin: 0;
-  margin-left: 95px;
 }
 
 .about {
@@ -766,6 +801,7 @@ button,
   max-width: 512px;
   width: 100%;
   margin-top: -5px;
+  margin-right: 88px;
 }
 
 .about__title {
@@ -1367,6 +1403,39 @@ button,
   fill: #f9fbfd;
 }
 
+.toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 13px;
+  height: 13px;
+  padding: 20px;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.toggle__button {
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1408,6 +1477,12 @@ button,
   }
 */
 
+@media (min-width: 768px) {
+  .toggle {
+    display: none;
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     max-width: 1023px;
@@ -1436,16 +1511,14 @@ button,
   .promo {
     background-image: -webkit-image-set(url("../../img/promo-bg-tablet.png") 1x, url("../../img/promo-bg-tabletx2.png") 2x);
     background-image: image-set(url("../../img/promo-bg-tablet.png") 1x, url("../../img/promo-bg-tabletx2.png") 2x);
+    background-size: 100% 100%;
     min-height: 638px;
-    margin-top: -61px;
-  }
-
-  .promo__container {
-    padding: 270px 45px 20px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 
   .promo__title {
-    margin-left: 0;
+    margin-top: 268px;
     font-size: 50px;
     line-height: 60px;
   }
@@ -1473,6 +1546,11 @@ button,
     font-size: 26px;
     line-height: 36px;
     margin-bottom: 17px;
+  }
+
+  .about__picture {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
   }
 
   .advantages {
@@ -1664,25 +1742,91 @@ button,
   }
 
   .header__container {
-    padding: 0 15px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .header__logo {
+    position: absolute;
+    left: 15px;
+    top: 20px;
   }
 
   .header__logo-icon {
     margin-top: 5px;
   }
 
+  .header__nav {
+    width: 100%;
+  }
+
+  .header__nav-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f9fbfd;
+    padding: 25px;
+    padding-top: 65px;
+    z-index: 4;
+    background-image: url("../../img/logo-mobile-menu.png");
+    background-position: left 15px top 20px;
+    background-repeat: no-repeat;
+    background-size: 42px 22px;
+  }
+
+  .header__nav-link {
+    color: #011c40;
+  }
+
+  .header__nav-item:hover .header__nav-link {
+    color: rgba(1, 28, 64, 0.6);
+  }
+
+  .header__nav__toggle {
+    display: block;
+  }
+
+  .header__nav--closed .header__nav-list {
+    display: none;
+  }
+
+  .header__nav--opened .header__nav-list {
+    display: block;
+    width: 93%;
+    height: 100vh;
+  }
+
+  .header__nav--nojs .header__nav__toggle {
+    display: none;
+  }
+
+  .header__nav--nojs .header__nav-list {
+    position: static;
+    display: block;
+    width: 100%;
+  }
+
   .promo {
     background-image: -webkit-image-set(url("../../img/promo-bg-mobile.png") 1x, url("../../img/promo-bg-mobilex2.png") 2x);
     background-image: image-set(url("../../img/promo-bg-mobile.png") 1x, url("../../img/promo-bg-mobilex2.png") 2x);
     min-height: 500px;
-    margin-top: -60px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
-  .promo__container {
-    padding: 176px 15px 20px;
+  .promo--nojs {
+    margin-top: 100px;
   }
 
   .promo__title {
+    margin-top: 176px;
     font-size: 36px;
     line-height: 45px;
   }
@@ -1707,8 +1851,9 @@ button,
   }
 
   .about__picture {
-    -ms-flex-item-align: end;
-    align-self: flex-end;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 
   .advantages {
@@ -1838,7 +1983,7 @@ button,
   }
 
   .location__map {
-    margin-right: 0;
+    margin: 0 auto;
     height: 316px;
   }
 
@@ -1874,8 +2019,18 @@ button,
     margin-bottom: 23px;
   }
 
+  .footer__social__wrapper {
+    margin-left: 0;
+  }
+
   .footer__social-list {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) and (hover: hover) {
+  .header__nav__toggle:hover:not(.focus-visible) {
+    opacity: 0.9;
   }
 }
 

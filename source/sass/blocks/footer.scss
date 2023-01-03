@@ -91,6 +91,10 @@
 
 .footer__social__wrapper {
     margin-left: auto;
+
+    @include vp-767 {
+        margin-left: 0;
+    }
 }
 
 .footer__social-list {

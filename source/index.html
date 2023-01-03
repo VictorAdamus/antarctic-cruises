@@ -26,28 +26,33 @@
             </svg>
           </a>
         </div>
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#" data-scroll-advantages>Преимущества</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#" data-scroll-booking>Направления</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#" data-scroll-products>Ближайшие круизы</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#" data-scroll-location>Контакты</a>
-          </li>
-        </ul>
+        <nav class="header__nav header__nav--nojs header__nav--closed" data-header-nav>
+          <h2 class="visually-hidden">Меню сайта.</h2>
+          <button class="header__nav__toggle toogle" type="button" data-header-toggle>
+            <span class="visually-hidden">Открыть/Закрыть.</span>
+            <span class="header__nav__toggle-button toggle__button"></span>
+          </button>
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#" data-scroll-advantages>Преимущества</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#" data-scroll-booking>Направления</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#" data-scroll-products>Ближайшие круизы</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#" data-scroll-location>Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main>
-      <section class="promo">
-        <div class="promo__container container">
-          <h1 class="promo__title">Круизы в&nbsp;Антарктику </h1>
-          <p class="promo__description">Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
-        </div>
+      <section class="promo promo--nojs" data-promo-section>
+        <h1 class="promo__title">Круизы в&nbsp;Антарктику </h1>
+        <p class="promo__description">Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
       </section>
       <section class="about">
         <div class="about__container container">
@@ -388,21 +393,23 @@
           </a>
         </div>
         <div class="footer__nav-list__wrapper">
-          <h2 class="visually-hidden">Меню сайта.</h2>
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Преимущества </a>
-            </li>
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Направления</a>
-            </li>
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Ближайшие круизы</a>
-            </li>
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Контакты</a>
-            </li>
-          </ul>
+          <nav>
+            <h2 class="visually-hidden">Меню сайта.</h2>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Преимущества </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Направления</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Ближайшие круизы</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
         </div>
         <div class="footer__social__wrapper">
           <h2 class="visually-hidden">Мы в социальных сетях.</h2>

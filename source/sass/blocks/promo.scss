@@ -1,22 +1,27 @@
 .promo {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    background-color: #4169e1;
+    min-height: 650px;
     background-image: image-set(
         url("../../img/promo-bg-desktop.png") 1x,
         url("../../img/promo-bg-desktopx2.png") 2x
     );
-    background-repeat: no-repeat;
     background-size: cover;
-    min-height: 650px;
-    margin-top: -76px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-right: calc(50% - (1366px / 2) + 103px);
+    padding-left: calc(50% - (1366px / 2) + 198px);
 
     @include vp-1023 {
         background-image: image-set(
             url("../../img/promo-bg-tablet.png") 1x,
             url("../../img/promo-bg-tabletx2.png") 2x
         );
+        background-size: 100% 100%;
         min-height: 638px;
-        margin-top: -61px;
+        padding-left: 45px;
+        padding-right: 45px;
     }
 
     @include vp-767 {
@@ -25,19 +30,15 @@
             url("../../img/promo-bg-mobilex2.png") 2x
         );
         min-height: 500px;
-        margin-top: -60px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
+    box-shadow: 0 4px 4px 0 $color-transparent-black;
 }
 
-.promo__container {
-    padding: 270px 103px 20px 103px;
-
-    @include vp-1023 {
-        padding: 270px 45px 20px;
-    }
-
+.promo--nojs {
     @include vp-767 {
-        padding: 176px 15px 20px;
+        margin-top: 100px;
     }
 }
 
@@ -46,17 +47,16 @@
     font-size: 54px;
     font-weight: 700;
     line-height: 65px;
-    margin: 0;
-    margin-left: 95px;
-    margin-bottom: 10px;
+    margin: 270px 0 10px;
 
     @include vp-1023  {
-        margin-left: 0;
+        margin-top: 268px;
         font-size: 50px;
         line-height: 60px;
     }
 
     @include vp-767 {
+        margin-top: 176px;
         font-size: 36px;
         line-height: 45px;
     }
@@ -68,7 +68,6 @@
     font-size: 20px;
     line-height: 24px;
     margin: 0;
-    margin-left: 95px;
 
     @include vp-1023 {
         margin-left: 0;

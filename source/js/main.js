@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {scrollToBlock} from './utils/scroll-to-block';
+import {menuToggle} from './utils/menu-toggle';
 
 // ---------------------------------
 
@@ -10,6 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  menuToggle();
   scrollToBlock();
   // Modules
   // ---------------------------------
