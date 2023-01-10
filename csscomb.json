@@ -1,9 +1,10 @@
 {
   "exclude": [
     ".git/**",
-    "node_modules/**"
+    "node_modules/**""calc-paddings.scss",
+    "variables.scss",
+    "mixins.scss"
   ],
-
   "always-semicolon": true,
   "block-indent": "  ",
   "color-case": "lower",

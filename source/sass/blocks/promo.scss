@@ -1,27 +1,28 @@
 .promo {
+    @include container();
     display: flex;
     flex-direction: column;
-    width: 100%;
     min-height: 650px;
+    padding-left: calc-padding(198px);
+    background-color: rgba(37,141,200,1);
     background-image: image-set(
-        url("../img/promo-bg-desktop.png") 1x,
-        url("../img/promo-bg-desktopx2.png") 2x
+        url("../img/promo-bg-desktop.jpg") 1x,
+        url("../img/promo-bg-desktopx2.jpg") 2x
     );
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
-    padding-right: calc(50% - (1366px / 2) + 103px);
-    padding-left: calc(50% - (1366px / 2) + 198px);
+
+    @media (max-width: $desktop-width-max) and (min-width: $desktop-width-min) {
+        padding-left: 198px;
+    }
 
     @include vp-1023 {
         background-image: image-set(
             url("../img/promo-bg-tablet.png") 1x,
             url("../img/promo-bg-tabletx2.png") 2x
         );
-        background-size: cover;
         min-height: 638px;
-        padding-left: 45px;
-        padding-right: 45px;
     }
 
     @include vp-767 {
@@ -30,12 +31,8 @@
             url("../img/promo-bg-mobilex2.png") 2x
         );
         min-height: 500px;
-        padding-left: 15px;
-        padding-right: 15px;
     }
-    box-shadow: 0 4px 4px 0 $color-transparent-black;
 }
-
 .promo--nojs {
     @include vp-767 {
         margin-top: 100px;
@@ -46,13 +43,13 @@
     color: $color-white;
     font-size: 54px;
     font-weight: 700;
-    line-height: 65px;
-    margin: 270px 0 10px;
+    line-height: 66px;
+    margin: 270px 0 12px;
 
     @include vp-1023  {
         margin-top: 268px;
         font-size: 50px;
-        line-height: 60px;
+        line-height: 61px;
     }
 
     @include vp-767 {
@@ -60,7 +57,6 @@
         font-size: 36px;
         line-height: 45px;
     }
-    
 }
 
 .promo__description {
@@ -70,8 +66,12 @@
     margin: 0;
 
     @include vp-1023 {
-        margin-left: 0;
         font-size: $fz-default-title;
         line-height: 22px;
+        font-size: 18px;
+    }
+
+    @include vp-767 {
+        font-size: 16px;
     }
 }

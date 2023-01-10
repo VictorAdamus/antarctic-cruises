@@ -13,7 +13,7 @@
     padding: 30px 103px 0;
 
     @include vp-1023 {
-       padding: 18px 45px 0; 
+        padding: 18px 45px 0;
     }
 
     @include vp-767 {
@@ -53,7 +53,7 @@
 
 .header__nav {
     @include vp-767 {
-       width: 100%;
+        width: 100%;
     }
 }
 
@@ -132,18 +132,14 @@
 
     @include vp-767 {
         display: block;
-
-        @include hover {
-            opacity: 0.9;
-        }
     }
 }
 
-.header__nav--closed .toggle__button {
+.header__nav--closed .header__toggle {
     background-image: url("../img/toggle-open.png");
 }
 
-.header__nav--opened .toggle__button {
+.header__nav--opened .header__toggle {
     background-image: url("../img/toggle-close.png");
     z-index: 5;
 }
@@ -161,7 +157,7 @@
         height: 100vh;
     }
 
-    .header__nav--nojs .header__nav__toggle {
+    .header__nav--nojs .header__nav-toggle {
         display: none;
     }
 

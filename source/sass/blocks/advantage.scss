@@ -1,0 +1,27 @@
+.advantage__icon {
+    fill: $color-dark-blue;
+    margin-bottom: 10px;
+
+    @include vp-1023 {
+        height: 26px;
+        width: auto;
+    }
+}
+
+.advantage__title {
+    font-size: $fz-default-title;
+    line-height: 27px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 10px;
+
+    @include vp-1023 {
+        font-size: $fz-default-title;
+    }
+}
+
+.advantage__description {
+    font-size: $fz-default-description;
+    line-height: 20px;
+    margin: 0;
+}
