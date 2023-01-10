@@ -1,68 +1,68 @@
 .cruise-description {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 386px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 386px;
+  padding: 29px 25px 35px;
+  background-color: $color-dark-blue;
+  color: $color-white;
+  opacity: 0;
+  z-index: 1;
+  overflow-y: auto;
+
+  @include vp-1023 {
+    padding: 29px 35px 35px;
+  }
+
+  @include vp-767 {
     padding: 29px 25px 35px;
-    background-color: $color-dark-blue;
-    color: $color-white;
-    opacity: 0;
-    z-index: 1;
-    overflow-y: auto;
-
-    @include vp-1023 {
-        padding: 29px 35px 35px;
-    }
-
-    @include vp-767 {
-        padding: 29px 25px 35px;
-    }
+  }
 }
 
 .card:hover:hover .cruise-description,
 .card:focus .cruise-description {
-    opacity: 1;
+  opacity: 1;
 }
 
 .cruise-description__title {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 13px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .cruise-description__list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    width: 100%;
-    margin-bottom: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .cruise-description__item {
-    margin-bottom: 11px;
+  margin-bottom: 11px;
 }
 
 .cruise-description__item:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .cruise-description__item-title {
-    margin: 0;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .cruise-description__item-text {
-    margin: 0;
-    font-size: 14px;
-    line-height: 20px;
-    color: $color-transparent-white;
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-transparent-white;
 }
 
 .cruise-description__button {
-    margin: auto auto 0;
+  margin: auto auto 0;
 }

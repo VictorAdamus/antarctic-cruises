@@ -1,128 +1,128 @@
 .footer {
-    @include container();
-    display: flex;
-    align-items: flex-start;
-    margin-top: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: $color-dark-blue;
-    color: $color-white;
+  @include container();
+  display: flex;
+  align-items: flex-start;
+  margin-top: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $color-dark-blue;
+  color: $color-white;
 
-    @include vp-767 {
-        flex-direction: column;
-        padding-top: 40px;
-        padding-bottom: 35px;
-    }
+  @include vp-767 {
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
 }
 
 .footer__logo {
-    margin-right: 40px;
+  margin-right: 40px;
 
-    @include vp-1023 {
-        margin-right: 25px;
-    }
+  @include vp-1023 {
+    margin-right: 25px;
+  }
 
-    @include vp-767 {
-        margin-right: 10px;
-        margin-bottom: 17px;
-    }
+  @include vp-767 {
+    margin-right: 10px;
+    margin-bottom: 17px;
+  }
 }
 
 .footer__logo-icon {
-    fill: $color-white;
-    cursor: default;
+  fill: $color-white;
+  cursor: default;
 
-    @include vp-1023 {
-        width: 38px;
-        height: auto;
-    }
+  @include vp-1023 {
+    width: 38px;
+    height: auto;
+  }
 
-    @include vp-767 {
-        width: 42px;
-        height: auto;
-    }
+  @include vp-767 {
+    width: 42px;
+    height: auto;
+  }
 }
 
 .footer__nav-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    column-gap: 33px;
-    row-gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  column-gap: 33px;
+  row-gap: 20px;
 
-    @include vp-1023 {
-        column-gap: 23px;
-    }
+  @include vp-1023 {
+    column-gap: 23px;
+  }
 
-    @include vp-767 {
-        grid-template-columns: 1fr;
-        row-gap: 7px;
-        margin-bottom: 23px;
-    }
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    row-gap: 7px;
+    margin-bottom: 23px;
+  }
 }
 
 .footer__nav-item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .footer__nav-link {
-    color: $color-white;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 500;
-    padding: 5px 0;
+  color: $color-white;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 5px 0;
 
-    @include vp-1023 {
-        font-size: 12px;
-        line-height: 14px;
-    }
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .footer__nav-item:hover .footer__nav-link {
-    color: $color-transparent-white;
+  color: $color-transparent-white;
 }
 
 .footer__social__wrapper {
-    margin-left: auto;
+  margin-left: auto;
 
-    @include vp-767 {
-        margin-left: 0;
-    }
+  @include vp-767 {
+    margin-left: 0;
+  }
 }
 
 .footer__social-list {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 27px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 27px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
-    @include vp-1023 {
-        gap: 22px;
-    }
+  @include vp-1023 {
+    gap: 22px;
+  }
 
-    @include vp-767 {
-        margin-left: 0;
-    }
+  @include vp-767 {
+    margin-left: 0;
+  }
 }
 
 .footer__social-item {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .footer__social-item:hover .footer__social-icon {
-    fill: $color-transparent-white;
+  fill: $color-transparent-white;
 }
 
 .footer__social-icon {
-    fill: $color-white;
+  fill: $color-white;
 
-    @include vp-1023 {
-        height: 16px;
-        width: auto;
-    }
+  @include vp-1023 {
+    height: 16px;
+    width: auto;
+  }
 }

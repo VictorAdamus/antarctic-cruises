@@ -60,5 +60,8 @@
   },
   "engines": {
     "node": ">=16.15.1"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^8.6.0"
   }
 }

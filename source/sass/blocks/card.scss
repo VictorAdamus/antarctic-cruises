@@ -1,69 +1,69 @@
 .card {
-    display: flex;
-    min-height: 386px;
-    // в сумме карточка по ширине с отступами = 25%
-    width: 22.4%;
-    margin-right: 1.3%;
-    margin-left: 1.3%;
-    margin-top: 30px;
-    position: relative;
-    color: $color-white;
+  display: flex;
+  min-height: 386px;
+  // в сумме карточка по ширине с отступами = 25%
+  width: 22.4%;
+  margin-right: 1.3%;
+  margin-left: 1.3%;
+  margin-top: 30px;
+  position: relative;
+  color: $color-white;
 
-    @include vp-1023 {
+  @include vp-1023 {
     // в сумме карточка по ширине с отступами = 50%
-        width: 45.6%;
-        margin-left: 2.2%;
-        margin-right: 2.2%;
-    }
+    width: 45.6%;
+    margin-left: 2.2%;
+    margin-right: 2.2%;
+  }
 
-    @include vp-767 {
-        width: 100%;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+  @include vp-767 {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .card:first-child {
-    @include vp-767 {
-        margin-top: 0;
-    }
+  @include vp-767 {
+    margin-top: 0;
+  }
 }
 
 .card:hover,
 .card:focus {
-    z-index: 1;
+  z-index: 1;
 }
 
 .card__img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    object-position: center centers;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center centers;
 }
 
 .card__title {
-    margin: 0;
-    margin-top: auto;
-    position: absolute;
-    left: 30px;
-    right: 30px;
-    bottom: 21px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
+  margin: 0;
+  margin-top: auto;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 21px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
 
-    @include vp-1023 {
-        left: 35px;
-        right: 35px;
-        bottom: 27px;
-    }
+  @include vp-1023 {
+    left: 35px;
+    right: 35px;
+    bottom: 27px;
+  }
 
-    @include vp-767 {
-        left: 25px;
-        right: 25px;
-        bottom: 17px;
-    }
+  @include vp-767 {
+    left: 25px;
+    right: 25px;
+    bottom: 17px;
+  }
 }

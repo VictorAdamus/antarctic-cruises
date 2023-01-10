@@ -1,5 +1,5 @@
 // функция расчета паддингов
 
 @function calc-padding($base-padding) {
-    @return calc(50% - (#{$desktop-width-max}/2) + #{$base-padding});
+  @return calc(50% - (#{$desktop-width-max}/2) + #{$base-padding});
 }

@@ -1,132 +1,132 @@
 .form {
-    background-color: $color-dark-blue;
-    color: $color-white;
-    padding: 50px;
-    max-width: 403px;
-    width: 100%;
-    box-shadow: 0 4px 45px $color-shadow-blue;
+  background-color: $color-dark-blue;
+  color: $color-white;
+  padding: 50px;
+  max-width: 403px;
+  width: 100%;
+  box-shadow: 0 4px 45px $color-shadow-blue;
 
-    @include vp-1023 {
-        margin-top: 52px;
-        padding-bottom: 49px;
-    }
+  @include vp-1023 {
+    margin-top: 52px;
+    padding-bottom: 49px;
+  }
 
-    @include vp-767 {
-        margin: 34px auto 0;
-        padding: 34px 30px 40px;
-    }
+  @include vp-767 {
+    margin: 34px auto 0;
+    padding: 34px 30px 40px;
+  }
 }
 
 .form__description {
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: 500;
-    margin: 0;
-    text-align: left;
-    margin-bottom: 28px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin: 0;
+  text-align: left;
+  margin-bottom: 28px;
 
-    @include vp-1023 {
-        margin-bottom: 29px;
-    }
+  @include vp-1023 {
+    margin-bottom: 29px;
+  }
 
-    @include vp-767 {
-        line-height: 25px;
-        text-align: center;
-    }
+  @include vp-767 {
+    line-height: 25px;
+    text-align: center;
+  }
 }
 
 .form__field {
-    display: flex;
-    flex-direction: column;
-    border: none;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .form__field input {
-    padding: 11px 16px 9px;
-    margin-bottom: 20px;
-    border: none;
-    width: 100%;
-    background-color: $color-white;
+  padding: 11px 16px 9px;
+  margin-bottom: 20px;
+  border: none;
+  width: 100%;
+  background-color: $color-white;
 }
 
 .form__field input:last-of-type {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .form__field input::placeholder {
-    font-size: $fz-default-description;
-    line-height: 21px;
-    color: rgba(1, 28, 64, 0.7);
+  font-size: $fz-default-description;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
 }
 
 .form__field input:hover::placeholder {
-    color: rgba(1, 28, 64, 0.3);
+  color: rgba(1, 28, 64, 0.3);
 }
 
 .form__checkbox-label {
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    min-height: 18px;
-    align-items: center;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  min-height: 18px;
+  align-items: center;
 
-    @include vp-767 {
-        margin-right: auto;
-    }
+  @include vp-767 {
+    margin-right: auto;
+  }
 }
 
 .form__checkbox-label:hover .form__checkbox-text {
-    color: $color-transparent-white;
+  color: $color-transparent-white;
 }
 
 .form__checkbox-label:hover .form__checkbox-checkmark {
-    background-color: $color-transparent-white;
+  background-color: $color-transparent-white;
 }
 
 
 .form__checkbox-label input {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 
 .form__checkbox-label input:checked ~ .form__checkbox-checkmark {
-    background-image: url("../img/checkbox-mark.svg");
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url("../img/checkbox-mark.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .form__checkbox-checkmark {
-    display: block;
-    box-sizing: border-box;
-    width: 18px;
-    height: 18px;
-    margin-right: 5px;
-    background-color: $color-white;
+  display: block;
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  background-color: $color-white;
 }
 
 .form__checkbox-text {
-    display: block;
-    font-size: 10px;
-    line-height: 13px;
-    font-family: $ff-main;
+  display: block;
+  font-size: 10px;
+  line-height: 13px;
+  font-family: $ff-main;
 }
 
 .form__button {
-    width: 100%;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 43px;
-    height: 100%;
-    margin-top: 30px;
-    font-size: $fz-default-description;
-    line-height: 21px;
-    font-family: $ff-main;
-    font-weight: 600;
-    cursor: pointer;
+  width: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 43px;
+  height: 100%;
+  margin-top: 30px;
+  font-size: $fz-default-description;
+  line-height: 21px;
+  font-family: $ff-main;
+  font-weight: 600;
+  cursor: pointer;
 }
