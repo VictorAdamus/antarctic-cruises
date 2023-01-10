@@ -1,7 +1,12 @@
-// Colors
-// ---------------------------------
+// Breakpoints
+$desktop-width-max: 1366px;
+$desktop-width-min: 1024px;
+$tablet-width-max: 1023px;
+$tablet-width-min: 768px;
+$mobile-width-max: 767px;
+$mobile-width-min: 320px;
 
-// Default
+// Default color
 
 $color-dark-blue:                   #011c40;
 $color-white:                       #f9fbfd;
@@ -45,3 +50,8 @@ $vp-1024:                           1024px;
 
 $retina-dpi:                        144dpi;
 $retina-dppx:                       1.5dppx;
+
+// Paddings
+$desktop-padding: 103px;
+$tablet-padding: 45px;
+$mobile-padding: 15px;

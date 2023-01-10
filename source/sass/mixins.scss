@@ -1,9 +1,3 @@
-@mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
-  }
-}
-
 @mixin hover {
   @media (hover: hover) {
     &:hover:not(.focus-visible) {
@@ -35,6 +29,30 @@
     @content;
   }
 }
+
+//Центровщик - контейнер 
+
+@mixin container() {
+  width: 100%;
+  padding-left: calc-padding($desktop-padding);
+  padding-right: calc-padding($desktop-padding);
+
+  @media (max-width: $desktop-width-max) {
+    padding-left: $desktop-padding;
+    padding-right: $desktop-padding;
+  }
+
+  @media (max-width: $tablet-width-max) {
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
+}
+
 
 // Desktop first
 

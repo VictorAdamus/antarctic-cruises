@@ -1,17 +1,19 @@
 .products {
+    @include container();
+    
     width: 100%;
     background-color: $color-white;
-}
-
-.products__container {
-    padding: 84px 103px 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 
     @include vp-1023 {
-        padding: 89px 60px 100px;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 
     @include vp-767 {
-        padding: 58px 25px 65px;
+        padding-top: 65px;
+        padding-bottom: 65px;
     }
 }
 
@@ -21,9 +23,11 @@
     line-height: 42px;
     font-weight: 600;
     margin: 0;
+    margin-top: -11px;
     margin-bottom: 50px;
 
     @include vp-1023 {
+        margin-top: -10px;
         font-size: 26px;
         line-height: 39px;
     }
@@ -31,286 +35,16 @@
     @include vp-767 {
         font-size: 24px;
         line-height: 36px;
+        margin-top: -9px;
         margin-bottom: 30px;
     }
 }
 
-.products__card {
-    margin: 0;
-    padding: 0 18px;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-
-    @include vp-1023 {
-        padding: 0;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include vp-767 {
-        grid-template-columns: 1fr;
-    }
-}
-
-.card {
-    background-color: $color-dark-blue;
-    color: $color-white;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 386px;
-    padding: 27px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow-y: auto;
-
-    &--1 {
-        background-image: image-set(
-            url("../../img/card-desktop-1.png") 1x,
-            url("../../img/card-desktop-1x2.png") 2x
-        );
-
-        @include vp-1023 {
-            background-image: image-set(
-                url("../../img/card-tablet-1.png") 1x,
-                url("../../img/card-tablet-1x2.png") 2x
-            );
-        }
-
-        @include vp-767 {
-            background-image: image-set(
-                url("../../img/card-mobile-1.png") 1x,
-                url("../../img/card-mobile-1x2.png") 2x
-            );
-        }
-
-    }
-    &--2 {
-        background-image: image-set(
-            url("../../img/card-desktop-2.png") 1x,
-            url("../../img/card-desktop-2x2.png") 2x
-        );
-
-        @include vp-1023 {
-            background-image: image-set(
-                url("../../img/card-tablet-2.png") 1x,
-                url("../../img/card-tablet-2x2.png") 2x
-            );
-        }
-
-        @include vp-767 {
-            background-image: image-set(
-                url("../../img/card-mobile-2.png") 1x,
-                url("../../img/card-mobile-2x2.png") 2x
-            );
-        }
-    }
-    &--3 {
-        background-image: image-set(
-            url("../../img/card-desktop-3.png") 1x,
-            url("../../img/card-desktop-3x2.png") 2x
-        );
-
-        @include vp-1023 {
-            background-image: image-set(
-                url("../../img/card-tablet-3.png") 1x,
-                url("../../img/card-tablet-3x2.png") 2x
-            );
-        }
-
-        @include vp-767 {
-            background-image: image-set(
-                url("../../img/card-mobile-3.png") 1x,
-                url("../../img/card-mobile-3x2.png") 2x
-            );
-        }
-    }
-    &--4 {
-        background-image: image-set(
-            url("../../img/card-desktop-4.png") 1x,
-            url("../../img/card-desktop-4x2.png") 2x
-        );
-
-        @include vp-1023 {
-            background-image: image-set(
-                url("../../img/card-tablet-4.png") 1x,
-                url("../../img/card-tablet-4x2.png") 2x
-            );
-        }
-
-        @include vp-767 {
-            background-image: image-set(
-                url("../../img/card-mobile-4.png") 1x,
-                url("../../img/card-mobile-4x2.png") 2x
-            );
-        }
-    }
-    &--5 {
-        background-image: image-set(
-            url("../../img/card-desktop-5.png") 1x,
-            url("../../img/card-desktop-5x2.png") 2x
-        );
-
-        @include vp-1023 {
-            background-image: image-set(
-                url("../../img/card-tablet-5.png") 1x,
-                url("../../img/card-tablet-5x2.png") 2x
-            );
-        }
-
-        @include vp-767 {
-            background-image: image-set(
-                url("../../img/card-mobile-5.png") 1x,
-                url("../../img/card-mobile-5x2.png") 2x
-            );
-        }
-    }
-    &--6 {
-        background-image: image-set(
-            url("../../img/card-desktop-6.png") 1x,
-            url("../../img/card-desktop-6x2.png") 2x
-        );
-
-        @include vp-1023 {
-            background-image: image-set(
-                url("../../img/card-tablet-6.png") 1x,
-                url("../../img/card-tablet-6x2.png") 2x
-            );
-        }
-
-        @include vp-767 {
-            background-image: image-set(
-                url("../../img/card-mobile-6.png") 1x,
-                url("../../img/card-mobile-6x2.png") 2x
-            );
-        }
-    }
-    &--7 {
-        background-image: image-set(
-            url("../../img/card-desktop-7.png") 1x,
-            url("../../img/card-desktop-7x2.png") 2x
-        );
-
-        @include vp-1023 {
-            background-image: image-set(
-                url("../../img/card-tablet-7.png") 1x,
-                url("../../img/card-tablet-7x2.png") 2x
-            );
-        }
-
-        @include vp-767 {
-            background-image: image-set(
-                url("../../img/card-mobile-7.png") 1x,
-                url("../../img/card-mobile-7x2.png") 2x
-            );
-        }
-    }
-    &--8 {
-        background-image: image-set(
-            url("../../img/card-desktop-8.png") 1x,
-            url("../../img/card-desktop-8x2.png") 2x
-        );
-
-        @include vp-1023 {
-            background-image: image-set(
-                url("../../img/card-tablet-8.png") 1x,
-                url("../../img/card-tablet-8x2.png") 2x
-            );
-        }
-
-        @include vp-767 {
-            background-image: image-set(
-                url("../../img/card-mobile-8.png") 1x,
-                url("../../img/card-mobile-8x2.png") 2x
-            );
-        }
-    }
-
-    @include hover {
-        background-image: none;
-        padding: 35px 25px;
-    }
-
-    @include vp-1023 {
-        padding: 34px;
-    }
-
-    @include vp-767 {
-        padding: 25px;
-    }
-}
-
-.card__name {
-    margin: 0;
-    font-size: $fz-default-title;
-    line-height: 18px;
-    font-weight: 500;
-}
-
-.card__info {
-    display: none;
-    height: 100%;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-}
-
-.card:hover .card__info {
-    display: flex;
-    flex-direction: column;
-}
-
-.card:hover .card__name {
-    display: none;
-}
-
-.card__title {
-    margin: 0;
-    margin-bottom: 25px;
-    font-size: $fz-default-title;
-    line-height: 18px;
-    font-weight: 500;
-}
-
-.card__list {
+.products__list {
     margin: 0;
     padding: 0;
     list-style-type: none;
-}
-
-.card__item {
-    margin-bottom: 20px;
-}
-
-.card__item__title {
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: $fz-default-description;
-    line-height: 14px;
-    font-weight: 500;
-}
-
-.card__item__description {
-    margin: 0;
-    font-size: $fz-default-description;
-    line-height: 14px;
-    font-weight: 400;
-}
-
-.card__button {
-    width: 100%;
-    background-color: $color-white;
-    margin-top: auto;
-    font-size: $fz-default-description;
-    line-height: 14px;
-    font-weight: 600;
-    min-height: 40px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @include hover {
-        background-color: $color-transparent-white;
-    }
+    flex-wrap: wrap;
+    align-items: flex-start;
 }

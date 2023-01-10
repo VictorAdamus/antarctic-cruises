@@ -10,6 +10,7 @@
 
 @import "variables";
 @import "mixins";
+@import "calc-paddings";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
@@ -18,7 +19,7 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
+@import "blocks/button";
 @import "blocks/header";
 @import "blocks/promo";
 @import "blocks/about";
@@ -29,6 +30,8 @@
 @import "blocks/location";
 @import "blocks/footer";
 @import "blocks/toggle.scss";
+@import "blocks/card.scss";
+@import "blocks/cruise-description.scss";
 
 // ---------------------------------
 
