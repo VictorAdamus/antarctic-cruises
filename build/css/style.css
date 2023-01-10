@@ -740,11 +740,11 @@ button,
 }
 
 .header__nav--closed .header__nav__toggle-button {
-  background-image: url("../../img/toggle-open.png");
+  background-image: url("../img/toggle-open.png");
 }
 
 .header__nav--opened .header__nav__toggle-button {
-  background-image: url("../../img/toggle-close.png");
+  background-image: url("../img/toggle-close.png");
   z-index: 5;
 }
 
@@ -758,8 +758,8 @@ button,
   flex-direction: column;
   width: 100%;
   min-height: 650px;
-  background-image: -webkit-image-set(url("../../img/promo-bg-desktop.png") 1x, url("../../img/promo-bg-desktopx2.png") 2x);
-  background-image: image-set(url("../../img/promo-bg-desktop.png") 1x, url("../../img/promo-bg-desktopx2.png") 2x);
+  background-image: -webkit-image-set(url("../img/promo-bg-desktop.png") 1x, url("../img/promo-bg-desktopx2.png") 2x);
+  background-image: image-set(url("../img/promo-bg-desktop.png") 1x, url("../img/promo-bg-desktopx2.png") 2x);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -830,8 +830,8 @@ button,
 .advantages {
   width: 100%;
   background-color: #b0c4de;
-  background-image: -webkit-image-set(url("../../img/advantage-bg-desktop.png") 1x, url("../../img/advantage-bg-desktopx2.png") 2x);
-  background-image: image-set(url("../../img/advantage-bg-desktop.png") 1x, url("../../img/advantage-bg-desktopx2.png") 2x);
+  background-image: -webkit-image-set(url("../img/advantages-bg-desktop.png") 1x, url("../img/advantages-bg-desktopx2.png") 2x);
+  background-image: image-set(url("../img/advantages-bg-desktop.png") 1x, url("../img/advantages-bg-desktopx2.png") 2x);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -925,8 +925,8 @@ button,
 .booking {
   width: 100%;
   background-color: #b0c4de;
-  background-image: -webkit-image-set(url("../../img/form-bg-desktop.png") 1x, url("../../img/form-bg-desktopx2.png") 2x);
-  background-image: image-set(url("../../img/form-bg-desktop.png") 1x, url("../../img/form-bg-desktopx2.png") 2x);
+  background-image: -webkit-image-set(url("../img/form-bg-desktop.png") 1x, url("../img/form-bg-desktopx2.png") 2x);
+  background-image: image-set(url("../img/form-bg-desktop.png") 1x, url("../img/form-bg-desktopx2.png") 2x);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1079,7 +1079,7 @@ button,
 }
 
 .form__checkbox-label input:checked ~ .form__checkbox-checkmark {
-  background-image: url("../../img/checkbox-mark.svg");
+  background-image: url("../img/checkbox-mark.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1143,7 +1143,7 @@ button,
   height: 306px;
   margin-right: 100px;
   background-color: #011c40;
-  background: url("../../img/map-desktop.png");
+  background: url("../img/map-desktop.png");
 }
 
 .location__map-image {
@@ -1513,8 +1513,8 @@ button,
   }
 
   .promo {
-    background-image: -webkit-image-set(url("../../img/promo-bg-tablet.png") 1x, url("../../img/promo-bg-tabletx2.png") 2x);
-    background-image: image-set(url("../../img/promo-bg-tablet.png") 1x, url("../../img/promo-bg-tabletx2.png") 2x);
+    background-image: -webkit-image-set(url("../img/promo-bg-tablet.png") 1x, url("../img/promo-bg-tabletx2.png") 2x);
+    background-image: image-set(url("../img/promo-bg-tablet.png") 1x, url("../img/promo-bg-tabletx2.png") 2x);
     background-size: cover;
     min-height: 638px;
     padding-left: 45px;
@@ -1560,8 +1560,8 @@ button,
   }
 
   .advantages {
-    background-image: -webkit-image-set(url("../../img/advantage-bg-tablet.png") 1x, url("../../img/advantage-bg-tabletx2.png") 2x);
-    background-image: image-set(url("../../img/advantage-bg-tablet.png") 1x, url("../../img/advantage-bg-tabletx2.png") 2x);
+    background-image: -webkit-image-set(url("../img/advantages-bg-tablet.png") 1x, url("../img/advantages-bg-tabletx2.png") 2x);
+    background-image: image-set(url("../img/advantages-bg-tablet.png") 1x, url("../img/advantages-bg-tabletx2.png") 2x);
   }
 
   .advantages__container {
@@ -1612,8 +1612,8 @@ button,
   }
 
   .booking {
-    background-image: -webkit-image-set(url("../../img/form-bg-tablet.png") 1x, url("../../img/form-bg-tabletx2.png") 2x);
-    background-image: image-set(url("../../img/form-bg-tablet.png") 1x, url("../../img/form-bg-tabletx2.png") 2x);
+    background-image: -webkit-image-set(url("../img/form-bg-tablet.png") 1x, url("../img/form-bg-tabletx2.png") 2x);
+    background-image: image-set(url("../img/form-bg-tablet.png") 1x, url("../img/form-bg-tabletx2.png") 2x);
   }
 
   .booking__container {
@@ -1755,7 +1755,7 @@ button,
     padding: 25px;
     padding-top: 65px;
     z-index: 4;
-    background-image: url("../../img/logo-mobile-menu.png");
+    background-image: url("../img/logo-mobile-menu.png");
     background-position: left 15px top 20px;
     background-repeat: no-repeat;
     background-size: 42px 22px;
@@ -1794,8 +1794,8 @@ button,
   }
 
   .promo {
-    background-image: -webkit-image-set(url("../../img/promo-bg-mobile.png") 1x, url("../../img/promo-bg-mobilex2.png") 2x);
-    background-image: image-set(url("../../img/promo-bg-mobile.png") 1x, url("../../img/promo-bg-mobilex2.png") 2x);
+    background-image: -webkit-image-set(url("../img/promo-bg-mobile.png") 1x, url("../img/promo-bg-mobilex2.png") 2x);
+    background-image: image-set(url("../img/promo-bg-mobile.png") 1x, url("../img/promo-bg-mobilex2.png") 2x);
     min-height: 500px;
     padding-left: 15px;
     padding-right: 15px;
@@ -1842,8 +1842,8 @@ button,
   }
 
   .advantages {
-    background-image: -webkit-image-set(url("../../img/advantage-bg-mobile.png") 1x, url("../../img/advantage-bg-mobilex2.png") 2x);
-    background-image: image-set(url("../../img/advantage-bg-mobile.png") 1x, url("../../img/advantage-bg-mobilex2.png") 2x);
+    background-image: -webkit-image-set(url("../img/advantages-bg-mobile.png") 1x, url("../img/advantages-bg-mobilex2.png") 2x);
+    background-image: image-set(url("../img/advantages-bg-mobile.png") 1x, url("../img/advantages-bg-mobilex2.png") 2x);
   }
 
   .advantages__container {
@@ -1884,8 +1884,8 @@ button,
   }
 
   .booking {
-    background-image: -webkit-image-set(url("../../img/form-bg-mobile.png") 1x, url("../../img/form-bg-mobile.png") 2x);
-    background-image: image-set(url("../../img/form-bg-mobile.png") 1x, url("../../img/form-bg-mobile.png") 2x);
+    background-image: -webkit-image-set(url("../img/form-bg-mobile.png") 1x, url("../img/form-bg-mobile.png") 2x);
+    background-image: image-set(url("../img/form-bg-mobile.png") 1x, url("../img/form-bg-mobile.png") 2x);
   }
 
   .booking__container {

@@ -2,8 +2,8 @@
     width: 100%;
     background-color: #b0c4de;
     background-image: image-set(
-        url("../../img/advantage-bg-desktop.png") 1x,
-        url("../../img/advantage-bg-desktopx2.png") 2x
+        url("../img/advantages-bg-desktop.png") 1x,
+        url("../img/advantages-bg-desktopx2.png") 2x
     );
     background-position: center;
     background-repeat: no-repeat;
@@ -11,15 +11,15 @@
 
     @include vp-1023 {
         background-image: image-set(
-            url("../../img/advantage-bg-tablet.png") 1x,
-            url("../../img/advantage-bg-tabletx2.png") 2x
+            url("../img/advantages-bg-tablet.png") 1x,
+            url("../img/advantages-bg-tabletx2.png") 2x
         );
     }
 
     @include vp-767 {
         background-image: image-set(
-            url("../../img/advantage-bg-mobile.png") 1x,
-            url("../../img/advantage-bg-mobilex2.png") 2x
+            url("../img/advantages-bg-mobile.png") 1x,
+            url("../img/advantages-bg-mobilex2.png") 2x
         );
     }
 }

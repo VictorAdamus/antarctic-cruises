@@ -2,8 +2,8 @@
     width: 100%;
     background-color: #b0c4de;
     background-image: image-set(
-        url("../../img/form-bg-desktop.png") 1x,
-        url("../../img/form-bg-desktopx2.png") 2x
+        url("../img/form-bg-desktop.png") 1x,
+        url("../img/form-bg-desktopx2.png") 2x
     );
     background-position: center;
     background-repeat: no-repeat;
@@ -11,15 +11,15 @@
 
     @include vp-1023 {
         background-image: image-set(
-            url("../../img/form-bg-tablet.png") 1x,
-            url("../../img/form-bg-tabletx2.png") 2x
+            url("../img/form-bg-tablet.png") 1x,
+            url("../img/form-bg-tabletx2.png") 2x
         );
     }
 
     @include vp-767 {
         background-image: image-set(
-            url("../../img/form-bg-mobile.png") 1x,
-            url("../../img/form-bg-mobile.png") 2x
+            url("../img/form-bg-mobile.png") 1x,
+            url("../img/form-bg-mobile.png") 2x
         );
     }
 }
