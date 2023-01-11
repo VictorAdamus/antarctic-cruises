@@ -1,45 +1,59 @@
 .header {
-  width: 100%;
+  @include container();
   background-color: transparent;
   z-index: 1;
   position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.header__container {
+  color: $color-white;
+  padding-top: 35px;
+  padding-bottom: 35px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 103px 0;
+
+  &--menu-open {
+    @include vp-767 {
+      position: absolute;
+      height: 100vh;
+      width: 94%;
+      top: 0;
+      right: 0;
+      background-color: $color-white;
+      flex-wrap: wrap;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      overflow: hidden;
+      box-shadow: -23px 0 6px -2px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &--no-js {
+    @include vp-767 {
+      position: static;
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
   @include vp-1023 {
-    padding: 18px 45px 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   @include vp-767 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0;
-    flex-direction: column;
-  }
-}
-
-.header__logo {
-  @include vp-767 {
-    position: absolute;
-    left: 15px;
-    top: 20px;
+    align-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
 .header__logo-link {
-  cursor: default;
+  display: block;
 }
 
 .header__logo-icon {
+  display: block;
+  width: 70px;
+  height: 38px;
   fill: $color-white;
 
   @include vp-1023 {
@@ -48,120 +62,27 @@
   }
 
   @include vp-767 {
-    margin-top: 5px;
+    width: 42px;
+    height: 22px;
+  }
+}
+
+.header__logo-link--custom .header__logo-icon {
+  @include vp-767 {
+    fill: $color-dark-blue;
   }
 }
 
 .header__nav {
+  margin-left: auto;
+
   @include vp-767 {
     width: 100%;
+    margin-left: 0;
+    margin-top: 44px;
   }
 }
 
-.header__nav-list {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  column-gap: 35px;
-
-  @include vp-1023 {
-    column-gap: 23px;
-  }
-
-  @include vp-767 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: $color-white;
-    padding: 25px;
-    padding-top: 65px;
-    z-index: 4;
-    background-image: url("../img/logo-mobile-menu.png");
-    background-position: left 15px top 20px;
-    background-repeat: no-repeat;
-    background-size: 42px 22px;
-  }
-}
-
-.header__nav-item {
-  padding: 13px 0;
-  display: flex;
-  align-items: center;
-}
-
-.header__nav-link {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  color: $color-white;
-
-  @include vp-1023 {
-    font-size: 14px;
-    line-height: 17px;
-  }
-
-  @include vp-767 {
-    color: $color-dark-blue;
-  }
-}
-
-.header__nav-item:hover .header__nav-link {
-  color: $color-transparent-white;
-
-  @include vp-767 {
-    color: rgba(1, 28, 64, 0.6);
-  }
-}
-
-.header__nav-toggle {
-  cursor: pointer;
-  width: 34px;
-  height: 22px;
-  border: none;
-  background-color: transparent;
-  display: none;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  right: 15px;
-  top: 25px;
-  padding: 5px;
-
-  @include vp-767 {
-    display: block;
-  }
-}
-
-.header__nav--closed .header__toggle {
-  background-image: url("../img/toggle-open.png");
-}
-
-.header__nav--opened .header__toggle {
-  background-image: url("../img/toggle-close.png");
-  z-index: 5;
-}
-
-@media (max-width: 767px) {
-  .header__nav--closed .header__nav-list {
-    display: none;
-  }
-
-  .header__nav--opened .header__nav-list {
-    display: block;
-    width: 93%;
-    height: 100vh;
-  }
-
-  .header__nav--nojs .header__nav-toggle {
-    display: none;
-  }
-
-  .header__nav--nojs .header__nav-list {
-    position: static;
-    display: block;
-    width: 100%;
-  }
+.header--no-js .header__nav {
+  text-align: center;
 }

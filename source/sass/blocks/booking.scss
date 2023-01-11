@@ -1,6 +1,7 @@
 .booking {
   @include container();
   display: flex;
+  justify-content: space-between;
   min-height: 555px;
   padding-right: calc-padding(163px);
   padding-left: calc-padding(163px);
