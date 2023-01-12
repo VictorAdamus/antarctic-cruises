@@ -10,6 +10,8 @@
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  box-shadow: 0 4px 4px $color-transparent-black;
+
 
   @media (max-width: $desktop-width-max) and (min-width: $desktop-width-min) {
     padding-left: 198px;
@@ -19,6 +21,7 @@
     background-image: image-set(url("../img/promo-bg-tablet.png") 1x,
         url("../img/promo-bg-tabletx2.png") 2x);
     min-height: 638px;
+    box-shadow: none;
   }
 
   @include vp-767 {
@@ -43,6 +46,7 @@
 
   @include vp-767 {
     margin-top: 176px;
+    margin-bottom: 10px;
     font-size: 36px;
     line-height: 45px;
   }

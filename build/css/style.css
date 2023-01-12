@@ -739,6 +739,8 @@ button,
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .promo__title {
@@ -767,7 +769,7 @@ button,
   -ms-flex-align: start;
   align-items: flex-start;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 145px;
 }
 
 .about__title {
@@ -775,7 +777,7 @@ button,
   line-height: 42px;
   font-weight: 600;
   margin: 0;
-  margin-top: 46px;
+  margin-top: 56px;
   margin-bottom: 24px;
 }
 
@@ -845,7 +847,7 @@ button,
 
 .advantage__icon {
   fill: #011c40;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .advantage__title {
@@ -862,13 +864,17 @@ button,
   margin: 0;
 }
 
+.br {
+  display: none;
+}
+
 .products {
   width: 100%;
   padding-left: calc(50% - (1366px/2) + 103px);
   padding-right: calc(50% - (1366px/2) + 103px);
   width: 100%;
   background-color: #f9fbfd;
-  padding-top: 120px;
+  padding-top: 84px;
   padding-bottom: 120px;
 }
 
@@ -878,8 +884,7 @@ button,
   line-height: 42px;
   font-weight: 600;
   margin: 0;
-  margin-top: -11px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .products__list {
@@ -941,6 +946,7 @@ button,
   background-color: #011c40;
   color: #f9fbfd;
   padding: 50px;
+  padding-top: 45px;
   max-width: 403px;
   width: 100%;
   -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
@@ -953,7 +959,7 @@ button,
   font-weight: 500;
   margin: 0;
   text-align: left;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .form__field {
@@ -978,7 +984,7 @@ button,
 }
 
 .form__field input:last-of-type {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .form__field input::-webkit-input-placeholder {
@@ -1068,7 +1074,7 @@ button,
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 18px;
+  min-width: 18px;
   height: 18px;
   margin-right: 5px;
   background-color: #f9fbfd;
@@ -1144,6 +1150,7 @@ button,
   line-height: 27px;
   font-weight: 500;
   margin: 0;
+  margin-bottom: 30px;
 }
 
 .location__address {
@@ -1174,6 +1181,8 @@ button,
 .location__icon {
   fill: #011c40;
   margin-right: 10px;
+  display: block;
+  min-width: 18px;
 }
 
 .footer {
@@ -1183,9 +1192,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: auto;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1504,6 +1513,8 @@ button,
     background-image: -webkit-image-set(url("../img/promo-bg-tablet.png") 1x, url("../img/promo-bg-tabletx2.png") 2x);
     background-image: image-set(url("../img/promo-bg-tablet.png") 1x, url("../img/promo-bg-tabletx2.png") 2x);
     min-height: 638px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 
   .promo__title {
@@ -1535,12 +1546,13 @@ button,
   }
 
   .about__picture {
-    margin-left: 30px;
+    margin-left: 25px;
+    margin-right: 5px;
   }
 
   .about__image {
     width: 324px;
-    height: 264px;
+    height: auto;
   }
 
   .advantages {
@@ -1565,7 +1577,7 @@ button,
   }
 
   .advantages__item {
-    padding: 25px 20px 20px;
+    padding: 25px 20px 18px;
   }
 
   .advantages__item:first-child {
@@ -1592,7 +1604,7 @@ button,
   }
 
   .products__title {
-    margin-top: -10px;
+    margin-top: -12px;
     font-size: 26px;
     line-height: 39px;
   }
@@ -1624,7 +1636,7 @@ button,
     font-size: 34px;
     line-height: 51px;
     margin-top: -12px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
 
   .booking__description {
@@ -1633,12 +1645,13 @@ button,
   }
 
   .form {
-    margin-top: 52px;
-    padding-bottom: 49px;
+    margin-top: 53px;
+    padding-top: 43px;
+    padding-bottom: 50px;
   }
 
   .form__description {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
   }
 
   .location {
@@ -1661,8 +1674,19 @@ button,
     margin: 65px 0 27px;
   }
 
+  .location__description {
+    margin-bottom: 28px;
+  }
+
   .location__address {
     margin-bottom: 22px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .location__address--address .location__icon {
+    margin-top: 5px;
   }
 
   .footer {
@@ -1683,6 +1707,7 @@ button,
     -webkit-column-gap: 23px;
     -moz-column-gap: 23px;
     column-gap: 23px;
+    margin-top: -3px;
   }
 
   .footer__nav-link {
@@ -1817,6 +1842,7 @@ button,
 
   .promo__title {
     margin-top: 176px;
+    margin-bottom: 10px;
     font-size: 36px;
     line-height: 45px;
   }
@@ -1836,7 +1862,7 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     padding-top: 65px;
-    padding-bottom: 65px;
+    padding-bottom: 85px;
   }
 
   .about__title {
@@ -1847,12 +1873,11 @@ button,
 
   .about__picture {
     margin: 0 auto;
-    margin-top: 33px;
+    margin-top: 43px;
   }
 
   .about__image {
     width: 290px;
-    height: 186px;
   }
 
   .advantages {
@@ -1868,8 +1893,10 @@ button,
   }
 
   .advantages__title {
+    margin-top: -9px;
     font-size: 24px;
     line-height: 36px;
+    margin-bottom: 31px;
   }
 
   .advantages__list {
@@ -1880,6 +1907,11 @@ button,
   .advantages__item {
     min-height: 250px;
     margin: 0 auto;
+    padding-bottom: 14px;
+  }
+
+  .br {
+    display: block;
   }
 
   .products {
@@ -1912,6 +1944,7 @@ button,
   }
 
   .booking__title {
+    text-align: center;
     font-size: 24px;
     line-height: 31px;
     margin-top: -6px;
@@ -1932,10 +1965,25 @@ button,
   .form__description {
     line-height: 25px;
     text-align: center;
+    margin-bottom: 29px;
+  }
+
+  .form__field input:last-of-type {
+    margin-bottom: 16px;
   }
 
   .form__checkbox-label {
     margin-right: auto;
+  }
+
+  .form__checkbox-checkmark {
+    min-width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  .form__button {
+    margin-top: 28px;
   }
 
   .location {
@@ -1948,7 +1996,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 65px;
+    padding-top: 55px;
     padding-bottom: 65px;
   }
 
@@ -1978,11 +2026,14 @@ button,
     flex-direction: column;
     padding-top: 40px;
     padding-bottom: 35px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .footer__logo {
     margin-right: 10px;
-    margin-bottom: 17px;
+    margin-bottom: 21px;
   }
 
   .footer__logo-icon {
@@ -1994,7 +2045,11 @@ button,
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     row-gap: 7px;
-    margin-bottom: 23px;
+    margin-bottom: 18px;
+  }
+
+  .footer__nav-link {
+    padding-bottom: 6px;
   }
 
   .footer__social__wrapper {
@@ -2065,6 +2120,11 @@ button,
 @media (max-width: 1366px) and (min-width: 1024px) {
   .promo {
     padding-left: 198px;
+  }
+
+  .booking {
+    padding-left: 163px;
+    padding-right: 163px;
   }
 }
 
