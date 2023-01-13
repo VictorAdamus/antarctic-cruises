@@ -39,6 +39,7 @@
 
 .booking__text {
   max-width: 500px;
+  margin-right: 20px;
 
   @include vp-1023 {
     margin: 0 auto;

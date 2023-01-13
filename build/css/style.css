@@ -658,12 +658,20 @@ button,
   opacity: 0.8;
 }
 
+.body {
+  min-width: 320px;
+}
+
+.body--menu-open {
+  overflow: hidden;
+}
+
 .header {
   width: 100%;
   padding-left: calc(50% - (1366px/2) + 103px);
   padding-right: calc(50% - (1366px/2) + 103px);
   background-color: transparent;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   color: #f9fbfd;
   padding-top: 35px;
@@ -772,6 +780,11 @@ button,
   padding-bottom: 145px;
 }
 
+.about__text {
+  max-width: 512px;
+  width: 100%;
+}
+
 .about__title {
   font-size: 28px;
   line-height: 42px;
@@ -789,15 +802,20 @@ button,
 
 .about__picture {
   margin-left: 85px;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 }
 
 .about__image {
   display: block;
-  width: 560px;
-  height: 301px;
   -o-object-fit: cover;
+  object-fit: cover;
+  max-width: 560px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -926,6 +944,7 @@ button,
 
 .booking__text {
   max-width: 500px;
+  margin-right: 20px;
 }
 
 .booking__title {
@@ -946,9 +965,12 @@ button,
   background-color: #011c40;
   color: #f9fbfd;
   padding: 50px;
-  padding-top: 45px;
+  padding-top: 44px;
   max-width: 403px;
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
   box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
 }
@@ -959,7 +981,7 @@ button,
   font-weight: 500;
   margin: 0;
   text-align: left;
-  margin-bottom: 26px;
+  margin-bottom: 27px;
 }
 
 .form__field {
@@ -976,7 +998,7 @@ button,
 }
 
 .form__field input {
-  padding: 11px 16px 9px;
+  padding: 10px 16px 10px;
   margin-bottom: 20px;
   border: none;
   width: 100%;
@@ -1125,10 +1147,9 @@ button,
 }
 
 .location__map {
-  width: 560px;
+  width: 100%;
+  max-width: 560px;
   height: 306px;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
   margin-right: 20px;
   background-color: #011c40;
   background-image: url("../img/map-desktop.png");
@@ -1223,6 +1244,7 @@ button,
   -moz-column-gap: 33px;
   column-gap: 33px;
   row-gap: 20px;
+  margin-right: 20px;
 }
 
 .footer__nav-item {
@@ -1292,7 +1314,7 @@ button,
 
 .card:hover,
 .card:focus {
-  z-index: 1;
+  z-index: 2;
 }
 
 .card__img {
@@ -1470,6 +1492,13 @@ button,
   .footer {
     padding-left: 103px;
     padding-right: 103px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card {
+    min-height: 250px;
+    height: auto;
   }
 }
 
@@ -1665,7 +1694,11 @@ button,
   }
 
   .location__map {
-    width: 324px;
+    min-width: 324px;
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     height: 335px;
   }
 
@@ -1747,6 +1780,21 @@ button,
     padding-right: 15px;
   }
 
+  .overlay {
+    background-color: rgba(0, 43, 102, 0.5);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+  }
+
+  .overlay--menu-open {
+    display: block;
+  }
+
   .header {
     padding-left: 15px;
     padding-right: 15px;
@@ -1755,7 +1803,7 @@ button,
   .header--menu-open {
     position: absolute;
     height: 100vh;
-    width: 94%;
+    width: 89vw;
     top: 0;
     right: 0;
     background-color: #f9fbfd;
@@ -1764,8 +1812,6 @@ button,
     padding-top: 20px;
     padding-bottom: 40px;
     overflow: hidden;
-    -webkit-box-shadow: -23px 0 6px -2px rgba(0, 0, 0, 0.5);
-    box-shadow: -23px 0 6px -2px rgba(0, 0, 0, 0.5);
   }
 
   .header--no-js {
@@ -1799,8 +1845,8 @@ button,
 
   .header__nav {
     width: 100%;
-    margin-left: 0;
-    margin-top: 44px;
+    margin-left: 10px;
+    margin-top: 40px;
   }
 
   .nav-menu {
@@ -1820,7 +1866,7 @@ button,
 
   .nav-menu__item {
     margin-left: 0;
-    margin-bottom: 19px;
+    margin-bottom: 26px;
   }
 
   .nav-menu__link {
@@ -1931,6 +1977,10 @@ button,
     margin-bottom: 30px;
   }
 
+  .products__list {
+    padding: 0 10px;
+  }
+
   .booking {
     padding-left: 15px;
     padding-right: 15px;
@@ -2002,8 +2052,9 @@ button,
 
   .location__map {
     margin: 14px auto 0;
-    width: 290px;
-    height: 316px;
+    width: 100%;
+    min-width: 290px;
+    min-height: 316px;
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
@@ -2092,8 +2143,9 @@ button,
 
   .card {
     width: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .card:first-child {

@@ -45,4 +45,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+
+  @include vp-767 {
+    padding: 0 10px;
+  }
 }

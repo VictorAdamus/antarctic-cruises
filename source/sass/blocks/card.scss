@@ -9,6 +9,11 @@
   position: relative;
   color: $color-white;
 
+  @media (max-width: 1200px) {
+    min-height: 250px;
+    height: auto;
+  }
+
   @include vp-1023 {
     // в сумме карточка по ширине с отступами = 50%
     width: 45.6%;
@@ -18,8 +23,9 @@
 
   @include vp-767 {
     width: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -31,7 +37,7 @@
 
 .card:hover,
 .card:focus {
-  z-index: 1;
+  z-index: 2;
 }
 
 .card__img {
