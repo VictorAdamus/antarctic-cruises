@@ -18,7 +18,7 @@
   <div class="wrapper">
     <div class="overlay" data-overlay></div>
     <header class="header header--no-js" data-header>
-      <a class="header__logo-link" href="#" data-logo-link>
+      <a class="header__logo-link header__logo-link--custom" href="#" data-logo-link>
         <span class="visually-hidden">Antarctic Cruises</span>
         <svg class="header__logo-icon" width="70" height="38">
           <use href="img/sprite/spite.svg#logo"></use>
@@ -27,7 +27,7 @@
       <button class="toggle toggle--open toggle--no-js" type="button" data-header-toggle>
         <span class="visually-hidden">Открыть меню / Закрыть меню.</span>
       </button>
-      <nav class="header__nav nav-menu" data-header-nav>
+      <nav class="header__nav nav-menu nav-menu--show" data-header-nav>
         <h2 class="visually-hidden">Меню сайта.</h2>
         <ul class="nav-menu__list">
           <li class="nav-menu__item">
@@ -403,7 +403,8 @@
       <section class="booking" data-booking>
         <div class="booking__text">
           <h2 class="booking__title">Раннее бронирование</h2>
-          <p class="booking__description">Забронируйте тур <br class="br">за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте
+          <p class="booking__description">Забронируйте тур <br class="br">за&nbsp;3-6 месяцев до&nbsp;даты выезда
+            и&nbsp;сэкономьте
             до&nbsp;50%</p>
         </div>
         <div class="form">
@@ -412,18 +413,19 @@
             </p>
             <fieldset class="form__field">
               <label class="visually-hidden" for="name">Введите имя.</label>
-              <input type="text" id="name" name="Имя" placeholder="Имя" minlength="2" maxlength="15" required>
+              <input type="text" id="name" name="Имя" placeholder="Валерия" minlength="2" maxlength="15" required>
               <label class="visually-hidden" for="phone">Введите номер телефона.</label>
-              <input type="tel" id="phone" name="Телефон" placeholder="Телефон" minlength="7"
-                pattern="[0-9]*" required>
-              <label class="visually-hidden" for="email">Введите Email.</label>
-              <input type="email" id="email" name="Email" placeholder="Email" pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$"
+              <input type="tel" id="phone" name="Телефон" placeholder="89236889975" minlength="7" pattern="[0-9]*"
                 required>
+              <label class="visually-hidden" for="email">Введите Email.</label>
+              <input type="email" id="email" name="Email" placeholder="grishaewa.lera@gmail.com"
+                pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$" required>
             </fieldset>
             <label class="form__checkbox-label" tabindex="0">
-              <input type="checkbox" name="assent" required>
+              <input class="form__checkbox" type="checkbox" name="assent" checked required>
               <span class="form__checkbox-checkmark"></span>
               <span class="form__checkbox-text">Я согласен на обработку моих&nbsp;персональных данных</span>
+              <span class="form__checkbox-error">Для продолжения установите флажок.</span>
             </label>
             <button class="form__button" type="submit">Оставить заявку</button>
           </form>
@@ -456,62 +458,52 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__logo">
-        <a class="footer__logo-link" href="#">
-          <span class="visually-hidden">Antarctic Cruises</span>
-          <svg class="footer__logo-icon" width="70" height="38">
-            <use href="img/sprite/spite.svg#logo"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="footer__nav-list__wrapper">
-        <nav>
-          <h2 class="visually-hidden">Меню сайта.</h2>
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Преимущества </a>
-            </li>
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Направления</a>
-            </li>
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Ближайшие круизы</a>
-            </li>
-            <li class="footer__nav-item">
-              <a class="footer__nav-link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer__social__wrapper">
-        <h2 class="visually-hidden">Мы в социальных сетях.</h2>
-        <ul class="footer__social-list">
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">
-              <span class="visually-hidden">Соц-сеть.</span>
-              <svg class="footer__social-icon" width="12" height="20">
-                <use href="img/sprite/spite.svg#social-ok"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">
-              <span class="visually-hidden">Соц-сеть.</span>
-              <svg class="footer__social-icon" width="20" height="20">
-                <use href="img/sprite/spite.svg#social-circle"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">
-              <span class="visually-hidden">Соц-сеть.</span>
-              <svg class="footer__social-icon" width="20" height="20">
-                <use href="img/sprite/spite.svg#social-smileys"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <a class="footer__logo-link" href="#">
+        <span class="visually-hidden">Antarctic Cruises</span>
+        <svg class="footer__logo-icon" width="70" height="38">
+          <use href="img/sprite/spite.svg#logo"></use>
+        </svg>
+      </a>
+      <ul class="footer__nav-list ">
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Преимущества </a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Направления</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Ближайшие круизы</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Контакты</a>
+        </li>
+      </ul>
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#">
+            <span class="visually-hidden">Соц-сеть.</span>
+            <svg class="footer__social-icon" width="12" height="20">
+              <use href="img/sprite/spite.svg#social-ok"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#">
+            <span class="visually-hidden">Соц-сеть.</span>
+            <svg class="footer__social-icon" width="20" height="20">
+              <use href="img/sprite/spite.svg#social-circle"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#">
+            <span class="visually-hidden">Соц-сеть.</span>
+            <svg class="footer__social-icon" width="20" height="20">
+              <use href="img/sprite/spite.svg#social-smileys"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </footer>
   </div>
   <script src="js/vendor.min.js"></script>

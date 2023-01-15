@@ -16,7 +16,7 @@
 
   @include vp-767 {
     margin: 34px auto 0;
-    padding: 34px 30px 40px;
+    padding: 36px 30px 40px;
   }
 }
 
@@ -48,7 +48,7 @@
 }
 
 .form__field input {
-  padding: 10px 16px 10px;
+  padding: 12px 16px 10px;
   margin-bottom: 20px;
   border: none;
   width: 100%;
@@ -146,5 +146,18 @@
 
   @include vp-767 {
     margin-top: 28px;
+  }
+}
+
+.form__checkbox-error {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  display: none;
+  font-size: 10px;
+  color: #ff0000;
+
+  &--show {
+    display: block;
   }
 }

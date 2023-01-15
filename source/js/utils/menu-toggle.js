@@ -9,6 +9,8 @@ const menuToggle = () => {
 
   header.classList.remove('header--no-js');
   toggle.classList.remove('toggle--no-js');
+  navMenu.classList.remove('nav-menu--show');
+  logo.classList.remove('header__logo-link--custom');
   const openMenu = function () {
     toggle.classList.add('toggle--close');
     navMenu.classList.add('nav-menu--show');
